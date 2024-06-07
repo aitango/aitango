@@ -1,6 +1,8 @@
 # 📸 TANGO 컨퍼런스(11월) 행사 
 
 2023년 11월 1일, 서울 과학기술회관에서 진행된 "TANGO 프레임워크 컨퍼런스"입니다.
+[![2023년 제2회 TANGO 커뮤니티 컨퍼런스 - 현장스케치
+](https://img.youtube.com/vi/mnx2jefpRiI/0.jpg)](https://youtu.be/mnx2jefpRiI)
 
 - 발표자료
 https://github.com/ML-TANGO/TANGO/tree/main/docs/2023_Fall_Community_Conference
