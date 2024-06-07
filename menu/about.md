@@ -1,7 +1,12 @@
 # TANGO 커뮤니티 소개 🎓✨
 - TANGO: Target Adaptive No-code Neural Network Generation and Operation Framework
 - TANGO는 코딩 없이도 인공지능 모델을 만들고 원하는 장치에 배포할 수 있게 도와주는 도구입니다.
-<a href="https://github.com/ML-TANGO/TANGO" target="_blank">https://github.com/ML-TANGO/TANGO 바로가기</a>
+
+TANGO는 인공지능을 더 쉽게 접근할 수 있도록 도와줍니다. 컴퓨터 공학이나 AI에 관심이 있지만, 복잡한 코드 때문에 망설였던 사람들에게 적합한 솔루션입니다. TANGO와 함께라면 누구나 쉽게 AI 세계로 들어갈 수 있습니다.
+
+인공지능 기술의 대중화(AI Democratization)를 위한 TANGO와 함께라면 인공지능이 더 이상 어려운 기술이 아닙니다. 손쉽게 AI 모델을 만들고, 여러분의 아이디어를 현실로 만들어보세요! 🌈
+
+[https://github.com/ML-TANGO/TANGO 바로가기](https://github.com/ML-TANGO/TANGO)
 <br>
 <br>
 <br>
@@ -115,16 +120,6 @@ TANGO는 코딩 없이도 AI 모델을 만들고 사용할 수 있는 환경을 
 <br>
 <br>
 
-### 한 걸음 더 나아가기 🚀
-TANGO는 인공지능을 더 쉽게 접근할 수 있도록 도와줍니다. 컴퓨터 공학이나 AI에 관심이 있지만, 복잡한 코드 때문에 망설였던 사람들에게 적합한 솔루션입니다. TANGO와 함께라면 누구나 쉽게 AI 세계로 들어갈 수 있습니다.
-
-
-인공지능 기술의 대중화(AI Democratization)를 위한 TANGO와 함께라면 인공지능이 더 이상 어려운 기술이 아닙니다. 손쉽게 AI 모델을 만들고, 여러분의 아이디어를 현실로 만들어보세요! 🌈
-
-
-<br>
-<br>
-<br>
 
 ### 문의 📞✉️
 박재복 책임  
