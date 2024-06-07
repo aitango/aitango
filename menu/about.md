@@ -6,7 +6,7 @@ TANGO는 인공지능을 더 쉽게 접근할 수 있도록 도와줍니다. 컴
 
 인공지능 기술의 대중화(AI Democratization)를 위한 TANGO와 함께라면 인공지능이 더 이상 어려운 기술이 아닙니다. 손쉽게 AI 모델을 만들고, 여러분의 아이디어를 현실로 만들어보세요! 🌈
 
-[![https://github.com/ML-TANGO/TANGO 바로가기]](https://github.com/ML-TANGO/TANGO)
+[https://github.com/ML-TANGO/TANGO 바로가기](https://github.com/ML-TANGO/TANGO)
 <br>
 <br>
 <br>
