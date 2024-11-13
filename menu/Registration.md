@@ -75,6 +75,23 @@
 <br><br><br>
 
 ### 행사 진행 문의 📞✉️
-한국인공지능협회   
-전화: 02-713-4800  
-이메일: [info@koraia.org](mailto:info@koraia.org)
+<table border="1" cellpadding="10" cellspacing="0" style="width: 100%; border-collapse: collapse;">
+  <thead>
+    <tr style="background-color: #f2f2f2; text-align: center;">
+      <th style="font-weight: bold;">담당자</th>
+      <th style="font-weight: bold;">문의</th>
+      <th style="font-weight: bold;">전화</th>
+      <th style="font-weight: bold;">이메일</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>한국전자통신연구원(ETRI) 박재복 책임</td>
+      <td>행사 문의</td>
+      <td>042-860-5565</td>
+      <td><a href="mailto:parkjb@etri.re.kr">parkjb@etri.re.kr</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<img src="img/logos.png">
