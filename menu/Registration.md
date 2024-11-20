@@ -18,7 +18,7 @@
               border-radius: 10px;
               box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
               transition: background 0.3s ease, transform 0.2s ease;">
-        2024 TANGO 참가 신청 등록하기 🎟 
+        참가 신청하기 🎟 
     </a>
 </div>
 
@@ -40,7 +40,7 @@
               box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
               transition: transform 0.2s ease, box-shadow 0.3s ease;
               overflow: hidden;">
-        2024 TANGO 브로셔 다운로드 💎 
+        브로셔 다운로드 💎 
     </a>
 </div>
 
