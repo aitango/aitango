@@ -1,14 +1,60 @@
 # 2024 제3회 TANGO 커뮤니티 컨퍼런스 🎄
 - 다양한 분야의 인공지능 서비스 개발을 가능케 하여 인공지능 기술의 대중화를 지원하는 신경망 자동생성 통합 개발 프레임워크 커뮤니티의 개발 기술 및 연구 결과물을 소개합니다.
 
+<br>
+
+ <!-- 참가 접수하기 버튼 -->
+<div style="text-align: center; margin: 30px 0;">
+    <a href="https://forms.office.com/r/xG9zrQE3k8" 
+       target="_blank" 
+       style="display: inline-block;
+              width: auto;
+              padding: 15px 30px;
+              font-size: 18px;
+              font-weight: bold;
+              color: #fff;
+              background: linear-gradient(90deg, #C70039, #900C3F);
+              text-decoration: none;
+              border-radius: 10px;
+              box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+              transition: background 0.3s ease, transform 0.2s ease;">
+        2024 TANGO 참가 신청 등록하기 🎟 
+    </a>
+</div>
+
+<br>
 <img src="img/poster_2024.jpg">
-<a href="https://raw.githubusercontent.com/aitango/aitango/refs/heads/main/2024 TANGO.pdf" style="display: inline-block; width: 100%; padding: 15px 0px 0px 15px; height: 60px; font-size: 16px; color: rgb(255, 255, 255); background: linear-gradient(90deg, rgb(142, 68, 173), rgb(109, 30, 157)); text-decoration: none; border-radius: 8px; box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 8px; transition: background 0.3s, transform 0.2s; transform: translateY(0px);" onmouseover="this.style.background='linear-gradient(90deg, #6d1e9d, #4a007d)'; this.style.transform='translateY(-2px)';" onmouseout="this.style.background='linear-gradient(90deg, #8e44ad, #6d1e9d)'; this.style.transform='translateY(0)';" class="text-lg text-primary underline hover:bg-activation transition duration-200">
-    💎 브로셔 다운로드 ( PDF )
-</a>
+
+<div style="display: flex; justify-content: center; margin: 30px 0;">
+    <a id="pdf" href="https://raw.githubusercontent.com/aitango/aitango/refs/heads/main/2024%20TANGO.pdf" 
+       style="display: inline-block;
+              width: auto;
+              padding: 20px;
+              font-size: 18px;
+              font-weight: bold;
+              color: #fff;
+              text-align: center;
+              background: linear-gradient(90deg, #8e44ad, #6d1e9d);
+              text-decoration: none;
+              border-radius: 12px;
+              box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+              transition: transform 0.2s ease, box-shadow 0.3s ease;
+              overflow: hidden;">
+        2024 TANGO 브로셔 다운로드 💎 
+    </a>
+</div>
+
+<style>
+    a:hover {
+        transform: translateY(-5px);
+    }
+</style>
+
 
 <br>
 <br>
-<br><br><br>
+<br>
+<br>
 
 ### 행사 정보 🚀
 
@@ -34,24 +80,16 @@
 </table>
 
 
-
-<hr>
- 
-
-
-<embed width="100%" height="1000px" src="https://forms.office.com/Pages/ResponsePage.aspx?id=R-m80YLgfUih_nFV8ZpfWyJQ58c_sd9CqRDKjJnOXlRURjM1NDkxWU5EV0hQOTFBS1RIRUk2VlJURi4u&embed=true" frameborder="0" marginwidth="0" marginheight="0" style="border: none; max-width:100%; max-height:100vh" allowfullscreen webkitallowfullscreen mozallowfullscreen msallowfullscreen>
+<!-- <embed width="100%" height="1000px" src="https://forms.office.com/Pages/ResponsePage.aspx?id=R-m80YLgfUih_nFV8ZpfWyJQ58c_sd9CqRDKjJnOXlRURjM1NDkxWU5EV0hQOTFBS1RIRUk2VlJURi4u&embed=true" frameborder="0" marginwidth="0" marginheight="0" style="border: none; max-width:100%; max-height:100vh" allowfullscreen webkitallowfullscreen mozallowfullscreen msallowfullscreen>
 
 > 참가 신청서는 위 폼을 통해 접수하실 수 있습니다.<br>만약 신청서 폼이 보이지 않는 경우, 아래의 '참가 신청서 작성하기' 버튼을 이용해 주시기 바랍니다.
 
 <br>
  <!-- 참가 접수하기 버튼 -->
-<a href="https://forms.office.com/r/xG9zrQE3k8" target="_blank" style="display: inline-block;/* padding: 20px 33%; */width: 100%;padding: 15px 0px 0px 15px;height: 60px;font-size: 16px;color: rgb(255, 255, 255);background: linear-gradient(90deg, rgb(0, 123, 255), rgb(0, 86, 179));text-decoration: none;border-radius: 8px;box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 8px;transition: background 0.3s, transform 0.2s;margin-left: 16px;transform: translateY(0px);" onmouseover="this.style.background='linear-gradient(90deg, #0056b3, #003d80)'; this.style.transform='translateY(-2px)';" onmouseout="this.style.background='linear-gradient(90deg, #007BFF, #0056b3)'; this.style.transform='translateY(0)';" class="text-lg text-primary underline hover:bg-activation transition duration-200">
-    🎟 참가 신청서 작성하기
-</a>
 
-<br>
 
-<br><br><br>
+<br><br>
+
 
 ### 행사 진행 문의 📞✉️
 <table border="1" cellpadding="10" cellspacing="0" style="width: 100%; border-collapse: collapse;">

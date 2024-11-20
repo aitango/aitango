@@ -1,14 +1,14 @@
 [
   {
-    "name": "Registration.md",
+    "name": "Registration",
     "download_url": "/menu/Registration.md"
   },
   {
-    "name": "about.md",
+    "name": "about",
     "download_url": "/menu/about.md"
   },
   {
-    "name": "blog.md",
-    "download_url": "/menu/blog.md"
+    "name": "blog",
+    "download_url": "/menu/blog2.md"
   }
 ]

@@ -19,10 +19,6 @@ https://github.com/ML-TANGO/TANGO/tree/main/docs/2023_Fall_Community_Conference
 
 
 
-![
- 2023 conference
-](img/23_result1.png)
-
 
 
 
