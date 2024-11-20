@@ -23,10 +23,10 @@
 </div>
 
 <br>
-<img src="img/poster_2024.jpg">
+<img src="img/2024_1120_1351_poster.jpg">
 
 <div style="display: flex; justify-content: center; margin: 30px 0;">
-    <a id="pdf" href="https://raw.githubusercontent.com/aitango/aitango/refs/heads/main/2024%20TANGO.pdf" 
+    <a id="pdf" href="https://raw.githubusercontent.com/aitango/aitango/refs/heads/main/2024_TANGO_brochure.pdf" 
        style="display: inline-block;
               width: auto;
               padding: 20px;
@@ -79,13 +79,6 @@
   </thead>
 </table>
 
-
-<!-- <embed width="100%" height="1000px" src="https://forms.office.com/Pages/ResponsePage.aspx?id=R-m80YLgfUih_nFV8ZpfWyJQ58c_sd9CqRDKjJnOXlRURjM1NDkxWU5EV0hQOTFBS1RIRUk2VlJURi4u&embed=true" frameborder="0" marginwidth="0" marginheight="0" style="border: none; max-width:100%; max-height:100vh" allowfullscreen webkitallowfullscreen mozallowfullscreen msallowfullscreen>
-
-> 참가 신청서는 위 폼을 통해 접수하실 수 있습니다.<br>만약 신청서 폼이 보이지 않는 경우, 아래의 '참가 신청서 작성하기' 버튼을 이용해 주시기 바랍니다.
-
-<br>
- <!-- 참가 접수하기 버튼 -->
 
 
 <br><br>
