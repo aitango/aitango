@@ -54,7 +54,7 @@
     </tr>
     <tr style="background-color: #f2f2f2; text-align: center;">
       <th style="font-weight: bold;">주관/주최</th>
-      <th style="text-align: left; background-color: #fff;">ETRI / 래블업, 웨다, 테슬라시스템(국내SW 기업), 한국인공지능협회, 서울대병원, 고려대학교, 홍익대학교, 중앙대학교</th>
+      <th style="text-align: left; background-color: #fff;">ETRI, 래블업, 웨다, 테슬라시스템(국내SW 기업), 한국인공지능협회, 서울대병원, 고려대학교, 홍익대학교, 중앙대학교</th>
     </tr>
         <tr style="background-color: #f2f2f2; text-align: center;">
       <th style="font-weight: bold;">브로셔</th>
