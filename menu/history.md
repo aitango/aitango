@@ -126,7 +126,7 @@
 
 <p id="2023TANGO"></p>
 
-# 2023 TANGO 커뮤니티 제1회 컨퍼런스
+# 2023 TANGO 커뮤니티 제2회 컨퍼런스
 ![
  2023 conference
 ](img/23_result1.png)
@@ -206,19 +206,21 @@
 
 # 2024 TANGO 커뮤니티 제3회 컨퍼런스
 
+ <!-- 참가 접수하기 버튼 -->
 <div style="text-align: center; margin: 30px 0;">
-    <a href="/?menu=Registration.md" 
+    <a href="https://forms.office.com/r/xG9zrQE3k8" 
+       target="_blank" 
        style="display: inline-block;
-              width: auto;
-              padding: 15px 30px;
-              font-size: 18px;
+              width: 100%;
+              padding: 30px 30px;
+              font-size: 30px;
               font-weight: bold;
               color: #fff;
-              background: linear-gradient(90deg, #C70039, #900C3F);
+              background: linear-gradient(90deg, #C70039, #772add);
               text-decoration: none;
               border-radius: 10px;
               box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
               transition: background 0.3s ease, transform 0.2s ease;">
-        2024 TANGO 참가 신청 등록하기 🎟 
+        💎 참가 신청하기 💎
     </a>
 </div>

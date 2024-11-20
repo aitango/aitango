@@ -53,7 +53,7 @@
       display: none;
       /* 기본적으로 팝업창을 숨깁니다 */
       position: fixed;
-      right: 1%;
+      right: 0.5%;
       top: 30%;
       transform: translate(-50%, -50%);
       width: 300px;
@@ -189,15 +189,7 @@
 
 
   <div class="overlay"></div>
-  <div class="popup" id="popup">
-    <a href="https://forms.office.com/r/xG9zrQE3k8" target="_blank">
-      <img src="img/popup_img.png" alt="">
-    </a>
-    <div class="popup-buttons"><br>
-      <button class="popup-button" style="color: white;" onclick="dontShowAgain()">■ 24시간 동안 열지 않기</button>
-      <button class="popup-button" style="color: white;" onclick="closePopup()">■ 닫기</button>
-    </div>
-  </div>
+
 
   <script>
     // 페이지 로드 시 리다이렉트 처리
@@ -228,49 +220,7 @@
 
   <!-- registry -->
   <script src="js/registry.js"></script>
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      if (!getCookie('hidePopup')) {
-        showPopup();
-      }
-    });
 
-    function showPopup() {
-      document.getElementById('popup').style.display = 'block';
-      document.querySelector('.overlay').style.display = 'block';
-    }
-
-    function closePopup() {
-      document.getElementById('popup').style.display = 'none';
-      document.querySelector('.overlay').style.display = 'none';
-    }
-
-    function dontShowAgain() {
-      setCookie('hidePopup', 'true', 1); // 1일 동안 쿠키 설정
-      closePopup();
-    }
-
-    function setCookie(name, value, days) {
-      var expires = "";
-      if (days) {
-        var date = new Date();
-        date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
-        expires = "; expires=" + date.toUTCString();
-      }
-      document.cookie = name + "=" + (value || "") + expires + "; path=/";
-    }
-
-    function getCookie(name) {
-      var nameEQ = name + "=";
-      var ca = document.cookie.split(';');
-      for (var i = 0; i < ca.length; i++) {
-        var c = ca[i];
-        while (c.charAt(0) == ' ') c = c.substring(1, c.length);
-        if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
-      }
-      return null;
-    }
-  </script>
 </body>
 
 </html>

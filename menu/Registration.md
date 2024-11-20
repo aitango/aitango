@@ -1,48 +1,30 @@
-# 2024 제3회 TANGO 커뮤니티 컨퍼런스 🎄
+# 2024 TANGO 커뮤니티 제3회 컨퍼런스 🎄
 - 다양한 분야의 인공지능 서비스 개발을 가능케 하여 인공지능 기술의 대중화를 지원하는 신경망 자동생성 통합 개발 프레임워크 커뮤니티의 개발 기술 및 연구 결과물을 소개합니다.
 
+
 <br>
+<img src="img/2024_1120_1351_poster.jpg">
 
  <!-- 참가 접수하기 버튼 -->
 <div style="text-align: center; margin: 30px 0;">
     <a href="https://forms.office.com/r/xG9zrQE3k8" 
        target="_blank" 
        style="display: inline-block;
-              width: auto;
-              padding: 15px 30px;
-              font-size: 18px;
+              width: 100%;
+              padding: 30px 30px;
+              font-size: 30px;
               font-weight: bold;
               color: #fff;
-              background: linear-gradient(90deg, #C70039, #900C3F);
+              background: linear-gradient(90deg, #C70039, #772add);
               text-decoration: none;
               border-radius: 10px;
               box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
               transition: background 0.3s ease, transform 0.2s ease;">
-        참가 신청하기 🎟 
+        💎 참가 신청하기 💎
     </a>
 </div>
 
-<br>
-<img src="img/2024_1120_1351_poster.jpg">
 
-<div style="display: flex; justify-content: center; margin: 30px 0;">
-    <a id="pdf" href="https://raw.githubusercontent.com/aitango/aitango/refs/heads/main/2024_TANGO_brochure.pdf" 
-       style="display: inline-block;
-              width: auto;
-              padding: 20px;
-              font-size: 18px;
-              font-weight: bold;
-              color: #fff;
-              text-align: center;
-              background: linear-gradient(90deg, #8e44ad, #6d1e9d);
-              text-decoration: none;
-              border-radius: 12px;
-              box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-              transition: transform 0.2s ease, box-shadow 0.3s ease;
-              overflow: hidden;">
-        브로셔 다운로드 💎 
-    </a>
-</div>
 
 <style>
     a:hover {
@@ -76,9 +58,12 @@
       <th style="font-weight: bold;">주관/주최</th>
       <th colspan="3" style="text-align: left; background-color: #fff;">ETRI / 래블업, 웨다, 테슬라시스템(국내SW 기업), 한국인공지능협회, 서울대병원, 고려대학교, 홍익대학교, 중앙대학교</th>
     </tr>
+        <tr style="background-color: #f2f2f2; text-align: center;">
+      <th style="font-weight: bold;">브로셔</th>
+      <th colspan="3" style="text-align: left; background-color: #fff;"><a id="pdf" href="https://raw.githubusercontent.com/aitango/aitango/refs/heads/main/2024_TANGO_brochure.pdf" >💾브로셔 다운로드</a></th>
+    </tr>
   </thead>
 </table>
-
 
 
 <br><br>
@@ -103,5 +88,6 @@
     </tr>
   </tbody>
 </table>
+
 
 <img src="img/logos.png">
