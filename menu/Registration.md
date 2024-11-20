@@ -53,8 +53,12 @@
       <th style="text-align: left; background-color: #fff;">과학기술회관 대회의실1 (서울 강남구 테헤란로7길 22 B1F) <a href="https://naver.me/5Q4ucnAe" target="_blank"> 📗네이버지도</a> / <a href="https://place.map.kakao.com/1549212044" target="_blank">📒 카카오맵</a></th>
     </tr>
     <tr style="background-color: #f2f2f2; text-align: center;">
-      <th style="font-weight: bold;">주관/주최</th>
-      <th style="text-align: left; background-color: #fff;">ETRI, 래블업, 웨다, 테슬라시스템(국내SW 기업), 한국인공지능협회, 서울대병원, 고려대학교, 홍익대학교, 중앙대학교</th>
+      <th style="font-weight: bold;">주관</th>
+      <th style="text-align: left; background-color: #fff;">ETRI</th>
+    </tr>
+    <tr style="background-color: #f2f2f2; text-align: center;">
+      <th style="font-weight: bold;">주최</th>
+      <th style="text-align: left; background-color: #fff;">래블업, 웨다, 테슬라시스템(국내SW 기업), 한국인공지능협회, 서울대병원, 고려대학교, 홍익대학교, 중앙대학교</th>
     </tr>
         <tr style="background-color: #f2f2f2; text-align: center;">
       <th style="font-weight: bold;">브로셔</th>
@@ -63,7 +67,7 @@
         </tr>
         <tr style="background-color: #f2f2f2; text-align: center;">
       <th style="font-weight: bold;">깃허브</th>
-      <th style="text-align: left; background-color: #fff;"><a href="https://github.com/ML-TANGO/TANGO" target="_blank">public repo for TANGO</a></th>
+      <th style="text-align: left; background-color: #fff;"><a href="https://github.com/ML-TANGO/TANGO" target="_blank">🌍public repo for TANGO</a></th>
     </tr>
   </thead>
 </table>
