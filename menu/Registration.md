@@ -24,7 +24,7 @@
     </tr>
     <tr style="background-color: #f2f2f2; text-align: center;">
       <th style="font-weight: bold;">장 소</th>
-      <th colspan="3" style="text-align: left; background-color: #fff;">과학기술회관 대회의실2 (서울 강남구 테헤란로7길 22 B1F) <a href="https://naver.me/5Q4ucnAe" target="_blank"> 📗네이버지도</a> / <a href="https://place.map.kakao.com/1549212044" target="_blank">📒 카카오맵</a></th>
+      <th colspan="3" style="text-align: left; background-color: #fff;">과학기술회관 대회의실1 (서울 강남구 테헤란로7길 22 B1F) <a href="https://naver.me/5Q4ucnAe" target="_blank"> 📗네이버지도</a> / <a href="https://place.map.kakao.com/1549212044" target="_blank">📒 카카오맵</a></th>
     </tr>
     <tr style="background-color: #f2f2f2; text-align: center;">
       <th style="font-weight: bold;">주관/주최</th>
