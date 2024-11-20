@@ -1,7 +1,7 @@
 # 2024 제3회 TANGO 커뮤니티 컨퍼런스 🎄
 - 다양한 분야의 인공지능 서비스 개발을 가능케 하여 인공지능 기술의 대중화를 지원하는 신경망 자동생성 통합 개발 프레임워크 커뮤니티의 개발 기술 및 연구 결과물을 소개합니다.
 
-<img src="img/poster.jpg">
+<img src="img/poster_2024.jpg">
 <a href="https://raw.githubusercontent.com/aitango/aitango/refs/heads/main/2024_tango.pdf" style="display: inline-block; width: 100%; padding: 15px 0px 0px 15px; height: 60px; font-size: 16px; color: rgb(255, 255, 255); background: linear-gradient(90deg, rgb(142, 68, 173), rgb(109, 30, 157)); text-decoration: none; border-radius: 8px; box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 8px; transition: background 0.3s, transform 0.2s; transform: translateY(0px);" onmouseover="this.style.background='linear-gradient(90deg, #6d1e9d, #4a007d)'; this.style.transform='translateY(-2px)';" onmouseout="this.style.background='linear-gradient(90deg, #8e44ad, #6d1e9d)'; this.style.transform='translateY(0)';" class="text-lg text-primary underline hover:bg-activation transition duration-200">
     💎 브로셔 다운로드 ( PDF / 2.94MB )
 </a>
