@@ -3,7 +3,7 @@
 
 <img src="img/poster_2024.jpg">
 <a href="https://raw.githubusercontent.com/aitango/aitango/refs/heads/main/2024 TANGO.pdf" style="display: inline-block; width: 100%; padding: 15px 0px 0px 15px; height: 60px; font-size: 16px; color: rgb(255, 255, 255); background: linear-gradient(90deg, rgb(142, 68, 173), rgb(109, 30, 157)); text-decoration: none; border-radius: 8px; box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 8px; transition: background 0.3s, transform 0.2s; transform: translateY(0px);" onmouseover="this.style.background='linear-gradient(90deg, #6d1e9d, #4a007d)'; this.style.transform='translateY(-2px)';" onmouseout="this.style.background='linear-gradient(90deg, #8e44ad, #6d1e9d)'; this.style.transform='translateY(0)';" class="text-lg text-primary underline hover:bg-activation transition duration-200">
-    💎 브로셔 다운로드 ( PDF / 2.94MB )
+    💎 브로셔 다운로드 ( PDF )
 </a>
 
 <br>
