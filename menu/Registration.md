@@ -18,7 +18,7 @@
               border-radius: 10px;
               box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
               transition: background 0.3s ease, transform 0.2s ease;">
-        💎 참가 신청하기 💎
+        💎 사전 접수 마감 | 현장 접수 가능 💎
     </a>
 </div>
 
