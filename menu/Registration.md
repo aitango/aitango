@@ -5,7 +5,7 @@
 
  <!-- 참가 접수하기 버튼 -->
 <div style="text-align: center; margin: 30px 0;">
-    <a href="https://forms.office.com/r/xG9zrQE3k8" 
+    <a href="#" 
        target="_blank" 
        style="display: inline-block;
               width: 100%;
@@ -18,9 +18,12 @@
               border-radius: 10px;
               box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
               transition: background 0.3s ease, transform 0.2s ease;">
-        💎 사전 접수 마감 | 현장 접수 가능 💎
+        💎 참석해주신 모든 분들께 깊이 감사드립니다. 💎
     </a>
 </div>
+
+* 현장 추첨을 제외한 경품은 행사 종료 후 SMS를 통해 발송되며, 발송까지 약간의 시간이 소요될 수 있습니다. 
+* 조금만 기다려 주시면 감사하겠습니다.
 
 
 

@@ -45,6 +45,10 @@
 
 ![
  2024 conference
+](img/2024/16.png)
+
+![
+ 2024 conference
 ](img/2024/2.png)
 
 ![
@@ -98,6 +102,10 @@
 ![
  2024 conference
 ](img/2024/15.png)
+
+![
+ 2024 conference
+](img/2024/17.png)
 
 
 
