@@ -5,7 +5,7 @@
 
  <!-- 참가 접수하기 버튼 -->
 <div style="text-align: center; margin: 30px 0;">
-    <a href="#" 
+    <a href="https://tangoai.or.kr/?menu=History.md#2024TANGO" 
        target="_blank" 
        style="display: inline-block;
               width: 100%;
