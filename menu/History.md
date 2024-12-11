@@ -53,6 +53,10 @@
 
 ![
  2024 conference
+](img/2024/attend_2.png)
+
+![
+ 2024 conference
 ](img/2024/3.png)
 
 ![
