@@ -142,7 +142,7 @@
 
 
 <div style="display: inline-block; justify-content: center; margin: 30px 0;">
-    <a href="https://github.com/ML-TANGO/TANGO/tree/main/docs/" target="_blank" 
+    <a href="https://github.com/ML-TANGO/TANGO/tree/main/docs/2024_Fall_Community_Conference" target="_blank" 
        style="display: inline-block;
               padding: 20px;
               font-size: 18px;
@@ -155,7 +155,7 @@
               box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
               transition: transform 0.2s ease, box-shadow 0.3s ease;
               overflow: hidden;">
-        🔗 제3회 발표자료 (준비중)
+        🔗 제3회 발표자료
     </a>
 </div>
 
