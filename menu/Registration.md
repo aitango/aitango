@@ -6,7 +6,7 @@
 
 <!-- 참가 접수하기 버튼 -->
 <div style="text-align: center; margin: 30px 0;">
-        <a href="/menu/Apply.md" id="apply-button" style="display: inline-block;
+        <a href="/?menu=Apply.md" id="apply-button" style="display: inline-block;
               width: 100%;
               padding: 30px 30px;
               font-size: 30px;
