@@ -83,12 +83,17 @@ window.addEventListener("popstate", (event) => {
     document.getElementById("blog-posts").style.display = "none";
     document.getElementById("contents").style.display = "block";
     // console.log(origin + "menu/" + url.search.split("=")[1])
-    fetch(origin + "menu/" + url.search.split("=")[1])
-      .then((response) => response.text())
-      .then((text) => {
-        // console.log(text)
-        styleMarkdown("menu", text);
-      });
+      const menuName = url.search.split("=")[1];
+      fetch(origin + "menu/" + menuName)
+          .then((response) => response.text())
+          .then((text) => {
+              styleMarkdown("menu", text);
+          })
+          .then(() => {
+              if (menuName === "Apply.md")
+                  initApplyPage();
+          });
+
   } else if (url.search.split("=")[0] === "?post") {
     // 블로그 상세 정보 로딩
     if (url.search.split("=")[0] === "?menu") {

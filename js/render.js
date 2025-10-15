@@ -665,7 +665,7 @@ async function initialize() {
             const url = new URL(window.location.href);
             window.history.pushState({}, "", url);
 
-            if (menuName === "Apply")
+            if (menuName === "Apply.md")
                 initApplyPage();
           });
       } catch (error) {
