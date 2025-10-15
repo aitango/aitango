@@ -215,9 +215,8 @@
 <script>
     // 페이지 로드 시 리다이렉트 처리
     window.onload = function () {
-        if (window.location.pathname === '/' && !window.location.search.includes('?menu=Registration')) {
+        if (window.location.pathname === '/' && !window.location.search)
             window.location.href = '/?menu=Registration.md';
-        }
     };
 </script>
 
