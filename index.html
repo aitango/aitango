@@ -213,11 +213,21 @@
 
 
 <script>
-    // 페이지 로드 시 리다이렉트 처리
-    window.onload = function () {
-        if (window.location.pathname === '/' && !window.location.search)
-            window.location.href = '/?menu=Registration.md';
-    };
+    window.addEventListener('DOMContentLoaded', function() {
+        const params = new URLSearchParams(window.location.search);
+        const menu = params.get('menu');
+
+        if (window.location.pathname === '/' && !menu)
+            return window.location.replace('/?menu=Registration.md');
+
+        if (menu === 'Apply.md') {
+            if (typeof initApplyPage === 'function') initApplyPage();
+            else
+                document.addEventListener('DOMContentLoaded', () => {
+                     if (typeof initApplyPage === 'function') initApplyPage();
+                }, { once: true });
+        }
+    });
 </script>
 
 <!-- utils -->
