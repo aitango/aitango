@@ -385,7 +385,7 @@ function renderOtherContents(menu) {
     menuDownloadUrl = menu.download_url;
   }
   try {
-    fetch(menuDownloadUrl)
+      fetch(menuDownloadUrl)
       .then((response) => response.text())
       .then((text) => styleMarkdown("menu", text, undefined))
       .then(() => {
@@ -393,10 +393,19 @@ function renderOtherContents(menu) {
         const url = new URL(origin);
         url.searchParams.set("menu", menu.name);
         window.history.pushState({}, "", url);
+
+        if (menu.name === "Apply")
+            initApplyPage();
       });
   } catch (error) {
     styleMarkdown("menu", "# Error입니다. 파일명을 확인해주세요.", undefined);
   }
+}
+
+function loadScript(src) {
+    const scriptEl = document.createElement("script");
+    scriptEl.src = src;
+    document.body.appendChild(scriptEl);
 }
 
 function renderBlogCategory() {

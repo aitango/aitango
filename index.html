@@ -2,166 +2,187 @@
 <html lang="ko">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="shortcut icon" href="img/icon/favicon.ico" type="image/x-icon" />
-  <meta name="description"
-    content="다양한 분야의 인공지능 서비스 개발을 가능케 하여 인공지능 기술의 대중화를 지원하는 신경망 자동생성 통합 개발 프레임워크 커뮤니티의 개발 기술 및 연구 결과물을 소개합니다.">
-  <meta property="og:description"
-    content="다양한 분야의 인공지능 서비스 개발을 가능케 하여 인공지능 기술의 대중화를 지원하는 신경망 자동생성 통합 개발 프레임워크 커뮤니티의 개발 기술 및 연구 결과물을 소개합니다.">
-  <meta property="og:type" content="website">
-  <meta property="og:image" content="https://github.com/aitango/aitango/blob/main/img/24_cover.png?raw=true">
-  <title>TANGO Community</title>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="shortcut icon" href="img/icon/favicon.ico" type="image/x-icon"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pretendard/dist/web/variable/pretendardvariable.css"/>
+    <meta name="description"
+          content="다양한 분야의 인공지능 서비스 개발을 가능케 하여 인공지능 기술의 대중화를 지원하는 신경망 자동생성 통합 개발 프레임워크 커뮤니티의 개발 기술 및 연구 결과물을 소개합니다.">
+    <meta property="og:description"
+          content="다양한 분야의 인공지능 서비스 개발을 가능케 하여 인공지능 기술의 대중화를 지원하는 신경망 자동생성 통합 개발 프레임워크 커뮤니티의 개발 기술 및 연구 결과물을 소개합니다.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://github.com/aitango/aitango/blob/main/img/24_cover.png?raw=true">
+    <title>TANGO Community</title>
 
-  <!-- marked -->
-  <script src="./library/marked.min.js"></script>
+    <!-- marked -->
+    <script src="./library/marked.min.js"></script>
 
-  <!-- hightlight.js -->
-  <link rel="stylesheet" href="./library/highlight_default.min.css" />
-  <script src="./library/highlight_highlight.min.js"></script>
-  <link rel="stylesheet" href="./library/highlight_ally-light.min.css" />
+    <!-- hightlight.js -->
+    <link rel="stylesheet" href="./library/highlight_default.min.css"/>
+    <script src="./library/highlight_highlight.min.js"></script>
+    <link rel="stylesheet" href="./library/highlight_ally-light.min.css"/>
 
-  <!-- custom css -->
-  <link rel="stylesheet" href=" style/style.css" />
+    <!-- custom css -->
+    <link rel="stylesheet" href=" style/style.css"/>
 
-  <!-- tailwind -->
-  <script src="./library/tailwind-3.4.1.js"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            primary: "#2e6ff2",
-            background: "#fff",
-            surface: "#121314",
-            graylv1: "#f3f5fa",
-            graylv2: "#d9dbe0",
-            graylv3: "#8d9299",
-            graylv4: "#47494d",
-            error: "#ff3440",
-            lowError: "#ffc533",
-            activation: "#dee8ff",
-          },
-        },
-      },
-    };
-  </script>
-  <!-- // tailwind -->
+    <!-- tailwind -->
+    <script src="./library/tailwind-3.4.1.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#A2C139",
+                        secondary: "#D21E44",
+                        tertiary: "#da647d",
+                        background: "#fff",
+                        surface: "#111827",
+                        graylv1: "#f3f5fa",
+                        graylv2: "#d9dbe0",
+                        graylv3: "#8d9299",
+                        graylv4: "#47494d",
+                        error: "#ff3440",
+                        lowError: "#ffc533",
+                        activation: "#dee8ff",
+                        bglv1: "#D6EBED",
+                        primaryLight: "#70A8A9",
+                        primaryDark: "#245A5E",
+                        secondaryLight: "#ff2554",
+                    },
+                    fontFamily: {
+                        pretendard: ['Pretendard Variable', 'Pretendard', 'sans-serif'],
+                    }
+                },
+            },
+        };
+    </script>
+    <!-- // tailwind -->
 
-  <style>
-    .popup {
-      display: none;
-      /* 기본적으로 팝업창을 숨깁니다 */
-      position: fixed;
-      right: 0.5%;
-      top: 30%;
-      transform: translate(-50%, -50%);
-      width: 300px;
-      padding: 20px;
-      background-color: rgb(0, 0, 0);
-      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-      border-radius: 10px;
-      /* 둥근 모서리 */
-      z-index: 1000;
-    }
+    <style>
+        html {
+            background: white;
+        }
 
-    .popup-header {
-      font-size: 18px;
-      margin-bottom: 10px;
-      background-color: rgb(255, 255, 101);
-    }
+        body * {
+            color: #222;
+        }
 
-    .popup-content {
-      margin-bottom: 20px;
-    }
+        ::selection {
+            background: #D6EBED;
+            color: #222;
+        }
 
-    .popup-buttons {
-      text-align: right;
-    }
+        .popup {
+            display: none;
+            /* 기본적으로 팝업창을 숨깁니다 */
+            position: fixed;
+            right: 0.5%;
+            top: 30%;
+            transform: translate(-50%, -50%);
+            width: 300px;
+            padding: 20px;
+            background-color: rgb(0, 0, 0);
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            /* 둥근 모서리 */
+            z-index: 1000;
+        }
 
-    .popup-button {
-      padding: 10px 20px;
-      margin-left: 10px;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-    }
+        .popup-header {
+            font-size: 18px;
+            margin-bottom: 10px;
+            background-color: rgb(255, 255, 101);
+        }
 
+        .popup-content {
+            margin-bottom: 20px;
+        }
 
-    @keyframes slideDown {
-      from {
-        transition: all 1s;
-        height: 0px;
-        opacity: 0;
-      }
+        .popup-buttons {
+            text-align: right;
+        }
 
-      to {
-        opacity: 1;
-        height: 60px;
-      }
-    }
+        .popup-button {
+            padding: 10px 20px;
+            margin-left: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
 
-    .markdown-cell>ul>li>p {
-      display: inline-block;
-    }
-  </style>
+        @keyframes slideDown {
+            from {
+                transition: all 1s;
+                height: 0px;
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+                height: 60px;
+            }
+        }
+
+        .markdown-cell > ul > li > p {
+            display: inline-block;
+        }
+    </style>
 </head>
 
-<body class="font-sans w-full text-surface">
+<body class="font-pretendard w-full text-surface">
 
-  <header class="relative bg-white mx-auto border-b border-gray-300">
+<header class="relative bg-white mx-auto border-b border-gray-300">
 
-    <nav class="container max-w-[1190px] mx-auto md:p-[19px] p-4 flex items-center relative">
+    <nav class="container max-w-[1190px] mx-auto md:p-[19px] p-4 flex items-center relative bg-transparent">
 
-      <!-- 블로그 제목 영역 -->
-      <img src="img/icon/favicon.png"></img>&nbsp;
+        <!-- 블로그 제목 영역 -->
+        <img src="img/icon/favicon.png" alt="Tango Community logo" />&nbsp;
 
+        <h1 class="md:text-2xl text-lg leading-6 mr-auto font-semibold text-gray-900 cursor-pointer">
+            <a href="/">TA<span class="text-tertiary">N</span>G<span class="text-tertiary">O</span> Community</a>
+        </h1>
+        <!-- // 블로그 제목 영역 -->
 
-      <h1 class="md:text-2xl text-lg leading-6 mr-auto font-semibold text-gray-900 cursor-pointer">
-        <a href="/">TANGO Community</a>
-      </h1>
-      <!-- // 블로그 제목 영역 -->
-
-      <!-- 메뉴 영역 -->
-      <div class="md:hidden w-6 h-6">
-        <button id="menu-button">
-          <span class="sr-only">메뉴 열기</span>
-        </button>
-      </div>
-
-      <div id="menu" class="hidden md:flex items-center">
-        <!-- 메뉴 아이템들 -->
-      </div>
-
-      <button id="search-button" class="ml-10 md:hidden flex">
-        <span class="sr-only">검색창 열기</span>
-      </button>
-
-      <div
-        class="search-cont w-80 hidden md:block md:relative absolute z-10 rounded-2xl p-4 border border-graylv2 bottom-[-12px] right-2 xl:right-0 translate-y-full bg-background w-96 max-w-full box-border md:p-0 md:top-0 md:right-0 md:border-0 md:translate-y-0 md:w-80 md:ml-10">
-        <label for="search-input">
-          <input type="text" id="search-input"
-            class="search-input bg-graylv1 rounded-[10px] px-5 py-2.5 placeholder:font-normal placehoder:text-graylv3 focus:outline-0 shadow-sm w-full"
-            placeholder="Keyword" /></label>
-        <div
-          class="btn-cont flex gap-2 justify-cetner items-center absolute top-1/2 md:right-4 right-8 -translate-y-1/2">
-          <button class="reset-inp-btn hidden">
-            <span class="sr-only">검색어 초기화</span>
-          </button>
-          <button class="search-inp-btn">
-            <span class="sr-only">검색하기</span>
-          </button>
+        <!-- 메뉴 영역 -->
+        <div class="md:hidden w-6 h-6">
+            <button id="menu-button">
+                <span class="sr-only">메뉴 열기</span>
+            </button>
         </div>
-      </div>
-      <!-- // 메뉴 영역 -->
+
+        <div id="menu" class="hidden md:flex items-center">
+            <!-- 메뉴 아이템들 -->
+        </div>
+
+        <button id="search-button" class="ml-10 md:hidden flex">
+            <span class="sr-only">검색창 열기</span>
+        </button>
+
+        <div class="search-cont w-80 hidden md:block md:relative absolute z-10 rounded-2xl p-4 border border-graylv2 bottom-[-12px] right-2 xl:right-0 translate-y-full bg-background w-96 max-w-full box-border md:p-0 md:top-0 md:right-0 md:border-0 md:translate-y-0 md:w-80 md:ml-10">
+            <label for="search-input">
+                <input type="text" id="search-input"
+                       class="search-input bg-graylv1 text-surface rounded-[10px] px-5 py-2.5 pr-10 placeholder:font-normal placehoder:text-graylv3 focus:outline-0 shadow-sm w-full"
+                       placeholder="Keyword"
+                />
+            </label>
+            <div class="btn-cont flex gap-2 justify-cetner items-center absolute top-1/2 md:right-4 right-8 -translate-y-1/2">
+                <button class="reset-inp-btn hidden">
+                    <span class="sr-only">검색어 초기화</span>
+                </button>
+                <button class="search-inp-btn">
+                    <span class="sr-only">검색하기</span>
+                </button>
+            </div>
+        </div>
+        <!-- // 메뉴 영역 -->
     </nav>
     <!-- 모바일에서 메뉴 영역이 보이도록 하는 영역 -->
-    <div id="mobileMenu" class="absolute bg-background w-full max-w-[1190px] border-b border-graylv2 z-10 md:hidden">
+    <div id="mobileMenu" class="absolute bg-background w-full max-w-[1190px] border-b border-gray-500 z-10 md:hidden">
     </div>
     <!-- // 모바일에서 메뉴 영역이 보이도록 하는 영역 -->
-  </header>
+</header>
 
-  <main class="container p-8 pb-4 w-full mx-auto max-w-[1190px] md:pt-[60px]">
+<main class="container p-8 pb-4 w-full mx-auto max-w-[1190px] md:pt-[60px]">
     <!-- 블로그 포스트 리스트 영역 -->
     <div id="blog-posts" class="grid md:grid-cols-2 lg:grid-cols-3 gap-x-[25px] lg:gap-y-10 gap-y-4 mb-20"></div>
     <!-- // 블로그 포스트 리스트 영역-->
@@ -172,54 +193,58 @@
 
     <!-- pagination -->
     <div id="pagination"></div>
-  </main>
+</main>
 
-  <!-- category 검색 영역 -->
-  <!-- <section
-    class="category-aside hidden md:flex flex-col border border-graylv2 bg-white rounded-[10px] fixed top-24 right-8 overflow-y-auto w-fit h-fit">
-    <header class="flex items-center">
-      <h2 class="aside-tit sr-only text-sm font-semibold ml-5">content</h2>
-      <button id="aside-button">
-        <span class="sr-only">카테고리 열기</span>
-      </button>
-    </header>
-    <aside></aside>
-  </section> -->
-  <!-- // category 검색 영역 -->
-
-
-  <div class="overlay"></div>
+<!-- category 검색 영역 -->
+<!-- <section
+  class="category-aside hidden md:flex flex-col border border-graylv2 bg-white rounded-[10px] fixed top-24 right-8 overflow-y-auto w-fit h-fit">
+  <header class="flex items-center">
+    <h2 class="aside-tit sr-only text-sm font-semibold ml-5">content</h2>
+    <button id="aside-button">
+      <span class="sr-only">카테고리 열기</span>
+    </button>
+  </header>
+  <aside></aside>
+</section> -->
+<!-- // category 검색 영역 -->
 
 
-  <script>
+<div class="overlay"></div>
+
+
+<script>
     // 페이지 로드 시 리다이렉트 처리
     window.onload = function () {
-      if (window.location.pathname === '/' && !window.location.search.includes('?menu=Registration')) {
-        window.location.href = '/?menu=Registration.md';
-      }
+        if (window.location.pathname === '/' && !window.location.search.includes('?menu=Registration')) {
+            window.location.href = '/?menu=Registration.md';
+        }
     };
-  </script>
+</script>
 
-  <!-- utils -->
-  <script src="js/utils.js"></script>
-  <!-- convert ipynb to html -->
-  <script src="style/convertIpynbToHtml.js"></script>
+<!-- utils -->
+<script src="js/utils.js"></script>
+<!-- convert ipynb to html -->
+<script src="style/convertIpynbToHtml.js"></script>
 
-  <!-- style -->
-  <script src="style/globalStyle.js"></script>
-  <script src="style/blogContentsStyle.js"></script>
+<!-- style -->
+<script src="style/globalStyle.js"></script>
+<script src="style/blogContentsStyle.js"></script>
 
-  <!-- mobile menu toggle -->
-  <script src="js/mobileMenuToggle.js"></script>
+<!-- mobile menu toggle -->
+<script src="js/mobileMenuToggle.js"></script>
 
-  <!-- lender -->
-  <script src="config.js"></script>
-  <script src="js/URLparsing.js"></script>
-  <script src="js/initData.js"></script>
-  <script src="js/render.js"></script>
+<!-- lender -->
+<script src="config.js"></script>
+<script src="js/URLparsing.js"></script>
+<script src="js/initData.js"></script>
+<script src="js/render.js"></script>
 
-  <!-- registry -->
-  <script src="js/registry.js"></script>
+<!-- registry -->
+<script src="js/registry.js"></script>
+
+<!-- apply -->
+<script src="js/apply.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 
 </body>
 
