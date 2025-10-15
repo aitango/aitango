@@ -103,7 +103,7 @@ function initApplyPage() {
             <!-- 6. 연락처 -->
             <div class="flex flex-col md:flex-row md:items-center gap-4">
                 <label for="contact" class="form-label md:w-1/2 text-lg">연락처<span class="ml-2 text-secondary">*</span> <span class="text-sm text-gray-400 font-normal">(경품 문자메시지 수신용)</span></label>
-                <input type="tel" id="contact" class="form-input bg-transparent md:w-1/2" placeholder="연락처를 입력해 주세요. (ex: 01012345678)" />
+                <input type="tel" id="contact" inputmode="numeric" class="form-input bg-transparent md:w-1/2" placeholder="연락처를 입력해 주세요. (ex: 01012345678)" maxlength="11" />
             </div>
     
             <!-- 7. 개인정보 수집 이용 목적 -->
@@ -185,6 +185,18 @@ function initApplyPage() {
     submitBtn.addEventListener('click', () => {
         // alert("2025 TANGO 사전 등록 접수가 곧 시작될 예정입니다.");
         onSubmit();
+    });
+
+    // 연락처 입력 필드에 숫자만 입력되도록 제한
+    const contactInput = document.getElementById('contact');
+    contactInput.addEventListener('input', (e) => {
+        // 숫자가 아닌 모든 문자 제거 (하이픈, 공백 등 포함)
+        e.target.value = e.target.value.replace(/[^0-9]/g, '');
+
+        // 최대 11자리로 제한 (010-1234-5678 형식)
+        if (e.target.value.length > 11) {
+            e.target.value = e.target.value.slice(0, 11);
+        }
     });
 
     // --- Functions ---
@@ -275,13 +287,21 @@ function initApplyPage() {
             return;
         }
 
-        handleEdgeFunctions('tango-slack', 'Slack', formData);
-        handleEdgeFunctions('tango-google-sheet', 'Google Sheets', formData);
-        handleEdgeFunctions('tango-welcome-email', 'Gmail', formData);
+        // Edge Functions 호출 (실패해도 신청은 완료됨)
+        try {
+            await Promise.allSettled([
+                handleEdgeFunctions('tango-slack', 'Slack', formData),
+                handleEdgeFunctions('tango-google-sheet', 'Google Sheets', formData),
+                handleEdgeFunctions('tango-welcome-email', 'Gmail', formData)
+            ]);
+        } catch (error) {
+            console.warn('Edge Functions 호출 중 일부 오류 발생 (신청은 정상 접수됨):', error);
+        }
 
-        alert('신청 접수가 완료되었습니다.');
+        // 모달 표시
+        showSuccessModal(formData);
+
         form.reset();
-
         conferenceHistoryDiv.classList.add('hidden');
         conferenceCheckboxes.forEach(cb => cb.disabled = true);
         submitBtn.disabled = true;
@@ -290,11 +310,123 @@ function initApplyPage() {
     const handleEdgeFunctions = async (functionName = '', serviceName = '', body) => {
         if (!functionName) return;
 
-        const {error: fnError} = await supabase.functions.invoke(functionName, {
-            body: body,
+        try {
+            const {data, error: fnError} = await supabase.functions.invoke(functionName, {
+                body: body,
+            });
+
+            if (fnError) {
+                console.warn(`${serviceName} 연동 실패:`, fnError.message);
+            } else {
+                console.log(`${serviceName} 연동 성공`);
+            }
+        } catch (error) {
+            // CORS 에러 등의 네트워크 오류 처리
+            console.warn(`${serviceName} 호출 오류 (무시됨):`, error.message);
+        }
+    };
+
+    const showSuccessModal = (formData) => {
+        // 참여 이력 텍스트 생성
+        let attendedText = '없음';
+        if (formData.attended !== '0') {
+            const conferences = formData.attended.split(',');
+            attendedText = conferences.map(num => `제 ${num}회`).join(', ') + ' 참여';
+        }
+
+        // 모달 HTML 생성
+        const modalHTML = `
+            <div id="success-modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
+                <div class="bg-white rounded-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto shadow-2xl">
+                    <!-- 모달 헤더 -->
+                    <div class="bg-gradient-to-r from-[#70A8A9] to-[#245A5E] text-white p-6 rounded-t-2xl">
+                        <div class="flex items-center gap-3">
+                            <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                            <div>
+                                <h2 class="text-2xl font-bold">신청 접수 완료</h2>
+                                <p class="text-sm opacity-90 mt-1">2025 TANGO 커뮤니티 제4회 컨퍼런스</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 모달 바디 -->
+                    <div class="p-8">
+                        <p class="text-gray-600 mb-6 text-center">
+                            신청이 정상적으로 접수되었습니다.<br>
+                            입력하신 정보는 다음과 같습니다.
+                        </p>
+                        
+                        <div class="bg-bglv1 rounded-xl p-6 space-y-4">
+                            <div class="flex border-b border-[#C7DEE0] pb-3">
+                                <span class="font-semibold text-primaryDark w-32">성함</span>
+                                <span class="text-gray-700">${formData.name}</span>
+                            </div>
+                            <div class="flex border-b border-[#C7DEE0] pb-3">
+                                <span class="font-semibold text-primaryDark w-32">소속/단체</span>
+                                <span class="text-gray-700">${formData.organization}</span>
+                            </div>
+                            <div class="flex border-b border-[#C7DEE0] pb-3">
+                                <span class="font-semibold text-primaryDark w-32">직급</span>
+                                <span class="text-gray-700">${formData.position}</span>
+                            </div>
+                            <div class="flex border-b border-[#C7DEE0] pb-3">
+                                <span class="font-semibold text-primaryDark w-32">이메일</span>
+                                <span class="text-gray-700">${formData.email}</span>
+                            </div>
+                            <div class="flex border-b border-[#C7DEE0] pb-3">
+                                <span class="font-semibold text-primaryDark w-32">연락처</span>
+                                <span class="text-gray-700">${formData.contact}</span>
+                            </div>
+                            <div class="flex">
+                                <span class="font-semibold text-primaryDark w-32">참여 이력</span>
+                                <span class="text-gray-700">${attendedText}</span>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-6 p-4 bg-blue-50 border border-blue-200 rounded-lg">
+                            <p class="text-sm text-blue-800">
+                                <strong>📧 안내:</strong> 소중한 시간을 내어 신청해주셔서 감사합니다.<br>
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- 모달 푸터 -->
+                    <div class="p-6 border-t border-gray-200">
+                        <button id="close-modal-btn" class="w-full bg-secondary hover:bg-secondaryLight text-white font-bold py-3 px-6 rounded-lg transition duration-200">
+                            확인
+                        </button>
+                    </div>
+                </div>
+            </div>
+        `;
+
+        // 모달을 body에 추가
+        document.body.insertAdjacentHTML('beforeend', modalHTML);
+
+        // 모달 닫기 이벤트
+        const modal = document.getElementById('success-modal');
+        const closeBtn = document.getElementById('close-modal-btn');
+
+        closeBtn.addEventListener('click', () => {
+            modal.remove();
         });
 
-        if (fnError)
-            console.error(`${serviceName} 연동 실패:`, fnError.message);
+        // 모달 배경 클릭 시 닫기
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                modal.remove();
+            }
+        });
+
+        // ESC 키로 닫기
+        const handleEsc = (e) => {
+            if (e.key === 'Escape') {
+                modal.remove();
+                document.removeEventListener('keydown', handleEsc);
+            }
+        };
+        document.addEventListener('keydown', handleEsc);
     };
 }
