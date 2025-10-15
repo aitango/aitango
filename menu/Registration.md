@@ -4,9 +4,9 @@
 
 <img src="img/2025/2025_tango.png">
 
- <!-- 참가 접수하기 버튼 -->
+<!-- 참가 접수하기 버튼 -->
 <div style="text-align: center; margin: 30px 0;">
-        <a href="/?menu=Apply.md" style="display: inline-block;
+        <a href="/?menu=Apply.md" id="apply-button" style="display: inline-block;
               width: 100%;
               padding: 30px 30px;
               font-size: 30px;
@@ -20,6 +20,24 @@
         2025 제 4회 TANGO 커뮤니티 참가 신청
     </a>
 </div>
+
+<script>
+    // 페이지가 렌더링된 후 버튼에 이벤트 리스너 추가
+    setTimeout(() => {
+        const applyButton = document.getElementById('apply-button');
+        if (applyButton) {
+            applyButton.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                // Apply 메뉴 찾기
+                const applyMenu = blogMenu.find(menu => menu.name === 'Apply.md');
+                if (applyMenu) {
+                    renderOtherContents(applyMenu);
+                }
+            });
+        }
+    }, 100);
+</script>
 
 - 현장 추첨을 제외한 경품은 행사 종료 후 SMS를 통해 발송되며, 발송까지 약간의 시간이 소요될 수 있습니다.
 
