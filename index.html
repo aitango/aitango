@@ -215,12 +215,12 @@
 <script>
     window.addEventListener('DOMContentLoaded', function() {
         const params = new URLSearchParams(window.location.search);
-        const menu = params.get('menu');
+        const currentMenu = params.get('menu');
 
-        if (window.location.pathname === '/' && !menu)
+        if (window.location.pathname === '/' && !currentMenu)
             return window.location.replace('/?menu=Registration.md');
 
-        if (menu === 'Apply.md') {
+        if (currentMenu === 'Apply.md') {
             if (typeof initApplyPage === 'function') initApplyPage();
             else
                 document.addEventListener('DOMContentLoaded', () => {
