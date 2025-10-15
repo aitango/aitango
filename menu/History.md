@@ -17,33 +17,62 @@
 
 <br>
 
-### 보도자료🌍
+### 언론보도🌍
 <div class="my-4" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin: 30px;">
-    <!-- 첫 번째 기사 -->
+    <a href="https://www.etnews.com/20241204000236" target="_blank" 
+        class="no-underline hover:text-gray-100 transform duration-200 hover:-translate-y-2" style="color: #E3E3E3">
+            <div class="p-4 rounded-lg bg-white border border-graylv2" style="overflow: hidden; text-align: center; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+                <img src="https://img.etnews.com/news/article/2024/12/04/news-p.v1.20241204.47808c8ed2e748c7a1fa2e0587af89fe_P1.jpg" alt="기사 이미지" class="hover:underline" style="width: 100%; height: auto; max-height: 150px; object-fit: cover; margin: 0 0 20px 0">
+                <p class="text-lg text-primaryDark" style="margin: 1rem 0 0; font-weight: bold">ETRI, '노코드' 기계학습 개발도구 공개…AI 지식 부족해도 개발 도와</p>
+                <p style="margin: 1rem 0 0 0; font-size: 1rem">2024.12.04 전자신문</p>
+            </div>
+    </a>
+    <a href="https://www.aitimes.kr/news/articleView.html?idxno=33084" target="_blank" 
+        class="no-underline hover:text-gray-100 transform duration-200 hover:-translate-y-2" style="color: #E3E3E3">
+            <div class="p-4 rounded-lg bg-white border border-graylv2" style="overflow: hidden; text-align: center; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+                <img src="https://cdn.aitimes.kr/news/photo/202412/33084_50295_557.png" alt="기사 이미지" class="hover:underline" style="width: 100%; height: auto; max-height: 150px; object-fit: cover; margin: 0 0 20px 0">
+                <p class="text-lg text-primaryDark" style="margin: 1rem 0 0; font-weight: bold">ETRI, 노코드 머신러닝 개발도구 '탱고 프레임워크' 오픈소스로 공개..."AI·SW지식 부족해도 한번 실행으로 OK!"</p>
+                <p style="margin: 1rem 0 0 0; font-size: 1rem">2024.12.04 인공지능신문</p>
+            </div>
+    </a>
+    <a href="https://www.koit.co.kr/news/articleView.html?idxno=127056" target="_blank" 
+        class="no-underline hover:text-gray-100 transform duration-200 hover:-translate-y-2" style="color: #E3E3E3">
+            <div class="p-4 rounded-lg bg-white border border-graylv2" style="overflow: hidden; text-align: center; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+                <img src="https://cdn.koit.co.kr/news/photo/202412/127056_79837_3031.jpg" alt="기사 이미지" class="hover:underline" style="width: 100%; height: auto; max-height: 150px; object-fit: cover; margin: 0 0 20px 0">
+                <p class="text-lg text-primaryDark" style="margin: 1rem 0 0; font-weight: bold">ETRI, 노코드 기계학습 개발도구로 산업 AX 지원</p>
+                <p style="margin: 1rem 0 0 0; font-size: 1rem">2024.12.04 정보통신신문</p>
+            </div>
+    </a>
+    <a href="https://www.fnnews.com/news/202412041037480146" target="_blank" 
+        class="no-underline hover:text-gray-100 transform duration-200 hover:-translate-y-2" style="color: #E3E3E3">
+            <div class="p-4 rounded-lg bg-white border border-graylv2" style="overflow: hidden; text-align: center; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+                <img src="https://image.fnnews.com/resource/media/image/2024/12/04/202412041038368349_l.JPG" alt="기사 이미지" class="hover:underline" style="width: 100%; height: auto; max-height: 150px; object-fit: cover; margin: 0 0 20px 0">
+                <p class="text-lg text-primaryDark" style="margin: 1rem 0 0; font-weight: bold">AI·IT 몰라도 '탱고'로 SW 만든다</p>
+                <p style="margin: 1rem 0 0 0; font-size: 1rem">2024-12-04 파이낸셜뉴스</p>
+            </div>
+    </a>
     <a href="https://www.etnews.com/20221101000222" target="_blank" 
         class="no-underline hover:text-gray-100 transform duration-200 hover:-translate-y-2" style="color: #E3E3E3">
-            <div class="p-4 rounded-lg bg-bglv1" style="overflow: hidden; text-align: center; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+            <div class="p-4 rounded-lg bg-white border border-graylv2" style="overflow: hidden; text-align: center; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
                 <img src="https://img.etnews.com/photonews/2211/1588887_20221101154719_276_0001.jpg" alt="기사 이미지" class="hover:underline" style="width: 100%; height: auto; max-height: 150px; object-fit: cover; margin: 0 0 20px 0">
-                <p class="text-xl text-primaryDark" style="margin: 1rem 0 0; font-weight: bold">과기정통부, 로우코드 기반 AI SW 개발 도구 공개</p>
-                <p style="margin: 1rem 0 0 0; font-size: 1rem">2022-11-01</p>
+                <p class="text-lg text-primaryDark" style="margin: 1rem 0 0; font-weight: bold">과기정통부, 로우코드 기반 AI SW 개발 도구 공개</p>
+                <p style="margin: 1rem 0 0 0; font-size: 1rem">2022-11-01 전자신문</p>
             </div>
     </a>
-    <!-- 두 번째 기사 -->
     <a href="https://www.hellodd.com/news/articleView.html?idxno=98512" target="_blank" 
         class="no-underline hover:text-gray-100 transform duration-200 hover:-translate-y-2" style="color: #E3E3E3">
-            <div class="p-4 rounded-lg bg-bglv1" style="overflow: hidden; text-align: center; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+            <div class="p-4 rounded-lg bg-white border border-graylv2" style="overflow: hidden; text-align: center; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
                 <img src="/img/news_02.png" alt="기사 이미지" class="hover:underline" style="width: 100%; height: auto; max-height: 150px; object-fit: cover; margin: 0 0 20px 0">
-                <p class="text-xl text-primaryDark" style="margin: 1rem 0 0; font-weight: bold">과기부-ETRI, 산업현장 핵심 'AI 알고리즘' 공개</p>
-                <p style="margin: 1rem 0 0 0; font-size: 1rem">2022.11.01</p>
+                <p class="text-lg text-primaryDark" style="margin: 1rem 0 0; font-weight: bold">과기부-ETRI, 산업현장 핵심 'AI 알고리즘' 공개</p>
+                <p style="margin: 1rem 0 0 0; font-size: 1rem">2022.11.01 헬로디디</p>
             </div>
     </a>
-    <!-- 세 번째 기사 -->
     <a href="https://www.sedaily.com/NewsView/29W5T2547W" target="_blank" 
         class="no-underline hover:text-gray-100 transform duration-200 hover:-translate-y-2" style="color: #E3E3E3">
-            <div class="p-4 rounded-lg bg-bglv1" style="overflow: hidden; text-align: center; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+            <div class="p-4 rounded-lg bg-white border border-graylv2" style="overflow: hidden; text-align: center; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
                 <img src="https://newsimg.sedaily.com/2023/10/30/29W5T2547W_1.jpg" alt="기사 이미지" class="hover:underline" style="width: 100%; height: auto; max-height: 150px; object-fit: cover; margin: 0 0 20px 0">
-                <p class="text-xl text-primaryDark" style="margin: 1rem 0 0; font-weight: bold">ETRI, 노코드 기계학습 개발도구 핵심기술 공개</p>
-                <p style="margin: 1rem 0 0 0; font-size: 1rem">2023-10-30</p>
+                <p class="text-lg text-primaryDark" style="margin: 1rem 0 0; font-weight: bold">ETRI, 노코드 기계학습 개발도구 핵심기술 공개</p>
+                <p style="margin: 1rem 0 0 0; font-size: 1rem">2023-10-30 서울경제</p>
             </div>
     </a>
 </div>
