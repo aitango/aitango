@@ -18,7 +18,7 @@
 <br>
 
 ### 언론보도🌍
-<div class="my-4" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin: 30px;">
+<div class="my-4 grid grid-cols-1 gap-5 m-8 sm:grid-cols-2 lg:grid-cols-3">
     <a href="https://www.etnews.com/20241204000236" target="_blank" 
         class="no-underline hover:text-gray-100 transform duration-200 hover:-translate-y-2" style="color: #E3E3E3">
             <div class="p-4 rounded-lg bg-white border border-graylv2" style="overflow: hidden; text-align: center; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
