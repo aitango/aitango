@@ -164,6 +164,9 @@ function initApplyPage() {
     const privacyConsent = document.getElementById('privacy-consent');
     const submitBtn = document.getElementById('submit-btn');
 
+    // 중복 제출 방지 플래그
+    let isSubmitting = false;
+
     // --- Event Listeners ---
     attendanceRadios.forEach((radio) => {
         radio.addEventListener('change', (e) => {
@@ -232,6 +235,9 @@ function initApplyPage() {
     };
 
     const onSubmit = async () => {
+        // 중복 제출 방지: 이미 제출 중이면 함수 종료
+        if (isSubmitting) return;
+
         function generateRandomString(length = 6) {
             const chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
             let result = "";
@@ -254,6 +260,12 @@ function initApplyPage() {
         if (!validateAndFocus(emailEl, '이메일을 입력해 주세요.')) return;
         if (!validateEmail(emailEl)) return;
         if (!validateContact(contactEl)) return;
+
+        // 제출 시작: 플래그 설정 및 버튼 비활성화
+        isSubmitting = true;
+        submitBtn.disabled = true;
+        const originalButtonText = submitBtn.textContent;
+        submitBtn.textContent = '제출 중...';
 
         const hasAttended = document.querySelector('input[name="attendance"]:checked').value === 'yes';
         let attended = '0';
@@ -284,6 +296,10 @@ function initApplyPage() {
         if (error) {
             console.error(error.message);
             alert('신청 접수에 실패했습니다.');
+            // 에러 발생 시 플래그 및 버튼 복구
+            isSubmitting = false;
+            submitBtn.disabled = false;
+            submitBtn.textContent = originalButtonText;
             return;
         }
 
@@ -301,10 +317,13 @@ function initApplyPage() {
         // 모달 표시
         showSuccessModal(formData);
 
+        // 폼 초기화 및 플래그 리셋
         form.reset();
         conferenceHistoryDiv.classList.add('hidden');
         conferenceCheckboxes.forEach(cb => cb.disabled = true);
         submitBtn.disabled = true;
+        submitBtn.textContent = originalButtonText;
+        isSubmitting = false;
     };
 
     const handleEdgeFunctions = async (functionName = '', serviceName = '', body) => {
