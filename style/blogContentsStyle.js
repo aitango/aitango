@@ -31,8 +31,11 @@ function styleMarkdown(kinds, text, title_info = null) {
     .querySelectorAll("p")
     .forEach((p) => p.classList.add(...postpStyle.split(" ")));
   tempDiv
-    .querySelectorAll("img")
-    .forEach((img) => img.classList.add(...postimgStyle.split(" ")));
+      .querySelectorAll("img")
+      .forEach((img) => {
+          img.classList.add(...postimgStyle.split(" "));
+          img.setAttribute("loading", "lazy");
+      });
   tempDiv
     .querySelectorAll("a")
     .forEach((a) => a.classList.add(...postaStyle.split(" ")));
@@ -233,7 +236,10 @@ function styleJupyter(kinds, text, title_info = null) {
       .forEach((p) => p.classList.add(...postpStyle.split(" ")));
     markdownCell
       .querySelectorAll("img")
-      .forEach((img) => img.classList.add(...postimgStyle.split(" ")));
+      .forEach((img) => {
+          img.classList.add(...postimgStyle.split(" "));
+          img.setAttribute("loading", "lazy");
+      });
     markdownCell
       .querySelectorAll("a")
       .forEach((a) => a.classList.add(...postaStyle.split(" ")));
