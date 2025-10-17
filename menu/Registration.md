@@ -109,7 +109,7 @@
         </tr>
         <tr>
             <th class="py-4 bg-bglv1 text-center">후원</th>
-            <th class="py-4" style="background: white">(주)알티스트, 한국전자기술연구원(KETI), (주)에이브노틱스, 슈어데이타랩, 아크릴, 하늘소프트, 한국정보통신기술협회(TTA)</th>
+            <th class="py-4" style="background: white">(주)알티스트, 한국전자기술연구원(KETI), (주)에이브노틱스, 슈어데이터랩, 아크릴, 하늘소프트, 한국정보통신기술협회(TTA)</th>
         </tr>
     </thead>
 </table>
