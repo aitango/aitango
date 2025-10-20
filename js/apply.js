@@ -142,7 +142,7 @@ function initApplyPage() {
             <!-- 제출 버튼 -->
             <div class="text-center pt-4">
                 <span id="submit-wrapper">
-                    <button type="button" id="submit-btn"
+                    <button type="button" id="confirm-btn"
                         class="bg-secondary text-white font-bold py-3 px-12 rounded-lg disabled:bg-[#E699A9] disabled:cursor-not-allowed transition" disabled>
                         신청 접수
                     </button>
@@ -162,7 +162,7 @@ function initApplyPage() {
     const conferenceHistoryDiv = document.getElementById('conference-history');
     const conferenceCheckboxes = document.getElementsByName('conference');
     const privacyConsent = document.getElementById('privacy-consent');
-    const submitBtn = document.getElementById('submit-btn');
+    const confirmBtn = document.getElementById('confirm-btn');
 
     // 중복 제출 방지 플래그
     let isSubmitting = false;
@@ -182,12 +182,11 @@ function initApplyPage() {
     });
 
     privacyConsent.addEventListener('change', () => {
-        submitBtn.disabled = !privacyConsent.checked;
+        confirmBtn.disabled = !privacyConsent.checked;
     });
 
-    submitBtn.addEventListener('click', () => {
-        // alert("2025 TANGO 사전 등록 접수가 곧 시작될 예정입니다.");
-        onSubmit();
+    confirmBtn.addEventListener('click', () => {
+        onConfirm();
     });
 
     // 연락처 입력 필드에 숫자만 입력되도록 제한
@@ -234,7 +233,7 @@ function initApplyPage() {
         return true;
     };
 
-    const onSubmit = async () => {
+    const onConfirm = () => {
         // 중복 제출 방지: 이미 제출 중이면 함수 종료
         if (isSubmitting) return;
 
@@ -261,12 +260,6 @@ function initApplyPage() {
         if (!validateEmail(emailEl)) return;
         if (!validateContact(contactEl)) return;
 
-        // 제출 시작: 플래그 설정 및 버튼 비활성화
-        isSubmitting = true;
-        submitBtn.disabled = true;
-        const originalButtonText = submitBtn.textContent;
-        submitBtn.textContent = '제출 중...';
-
         const hasAttended = document.querySelector('input[name="attendance"]:checked').value === 'yes';
         let attended = '0';
         if (hasAttended) {
@@ -288,42 +281,8 @@ function initApplyPage() {
             attended: attended,
         };
 
-        // DB insert
-        const {error} = await supabase
-            .from('tango')
-            .insert([formData]);
-
-        if (error) {
-            console.error(error.message);
-            alert('신청 접수에 실패했습니다.');
-            // 에러 발생 시 플래그 및 버튼 복구
-            isSubmitting = false;
-            submitBtn.disabled = false;
-            submitBtn.textContent = originalButtonText;
-            return;
-        }
-
-        // Edge Functions 호출 (실패해도 신청은 완료됨)
-        try {
-            await Promise.allSettled([
-                handleEdgeFunctions('tango-slack', 'Slack', formData),
-                handleEdgeFunctions('tango-google-sheet', 'Google Sheets', formData),
-                handleEdgeFunctions('tango-welcome-email', 'Gmail', formData)
-            ]);
-        } catch (error) {
-            console.warn('Edge Functions 호출 중 일부 오류 발생 (신청은 정상 접수됨):', error);
-        }
-
-        // 모달 표시
-        showSuccessModal(formData);
-
-        // 폼 초기화 및 플래그 리셋
-        form.reset();
-        conferenceHistoryDiv.classList.add('hidden');
-        conferenceCheckboxes.forEach(cb => cb.disabled = true);
-        submitBtn.disabled = true;
-        submitBtn.textContent = originalButtonText;
-        isSubmitting = false;
+        // 컨펌 모달 표시
+        showConfirmModal(formData);
     };
 
     const handleEdgeFunctions = async (functionName = '', serviceName = '', body) => {
@@ -360,12 +319,12 @@ function initApplyPage() {
                     <!-- 모달 헤더 -->
                     <div class="bg-gradient-to-r from-[#70A8A9] to-[#245A5E] text-white p-6 rounded-t-2xl">
                         <div class="flex items-center gap-3">
-                            <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <svg class="w-12 h-12" fill="none" stroke="white" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                             </svg>
                             <div>
-                                <h2 class="text-2xl font-bold">신청 접수 완료</h2>
-                                <p class="text-sm opacity-90 mt-1">2025 TANGO 커뮤니티 제4회 컨퍼런스</p>
+                                <h2 class="text-2xl font-bold text-white">신청 접수 완료</h2>
+                                <p class="text-sm opacity-90 mt-1 text-white">2025 TANGO 커뮤니티 제4회 컨퍼런스</p>
                             </div>
                         </div>
                     </div>
@@ -448,4 +407,158 @@ function initApplyPage() {
         };
         document.addEventListener('keydown', handleEsc);
     };
+
+    const showConfirmModal = (formData) => {
+        // 참여 이력 텍스트 생성
+        let attendedText = '없음';
+        if (formData.attended !== '0') {
+            const conferences = formData.attended.split(',');
+            attendedText = conferences.map(num => `제 ${num}회`).join(', ') + ' 참여';
+        }
+
+        // 모달 HTML 생성
+        const modalHTML = `
+            <div id="confirm-modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
+                <div class="bg-white rounded-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto shadow-2xl">
+                    <!-- 모달 헤더 -->
+                    <div class="bg-gradient-to-r from-[#70A8A9] to-[#245A5E] text-white p-6 rounded-t-2xl">
+                        <div class="flex items-center gap-3">
+                            <svg class="w-12 h-12" fill="none" stroke="white" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                            <div>
+                                <h2 class="text-2xl font-bold text-white">신청 접수 확인</h2>
+                                <p class="text-sm opacity-90 mt-1 text-white">2025 TANGO 커뮤니티 제4회 컨퍼런스</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 모달 바디 -->
+                    <div class="p-8">
+                        <p class="text-gray-600 mb-6 text-center">
+                            아래 내용으로 2025 TANGO 커뮤니티 제4회 컨퍼런스 사전 접수를 신청합니다.<br>
+                            최종 제출 전 마지막으로 내용을 확인해주세요.
+                        </p>
+                        
+                        <div class="bg-bglv1 rounded-xl p-6 space-y-4">
+                            <div class="flex border-b border-[#C7DEE0] pb-3">
+                                <span class="font-semibold text-primaryDark w-32">성함</span>
+                                <span class="text-gray-700">${formData.name}</span>
+                            </div>
+                            <div class="flex border-b border-[#C7DEE0] pb-3">
+                                <span class="font-semibold text-primaryDark w-32">소속/단체</span>
+                                <span class="text-gray-700">${formData.organization}</span>
+                            </div>
+                            <div class="flex border-b border-[#C7DEE0] pb-3">
+                                <span class="font-semibold text-primaryDark w-32">직급</span>
+                                <span class="text-gray-700">${formData.position}</span>
+                            </div>
+                            <div class="flex border-b border-[#C7DEE0] pb-3">
+                                <span class="font-semibold text-primaryDark w-32">이메일</span>
+                                <span class="text-gray-700">${formData.email}</span>
+                            </div>
+                            <div class="flex border-b border-[#C7DEE0] pb-3">
+                                <span class="font-semibold text-primaryDark w-32">연락처</span>
+                                <span class="text-gray-700">${formData.contact}</span>
+                            </div>
+                            <div class="flex">
+                                <span class="font-semibold text-primaryDark w-32">참여 이력</span>
+                                <span class="text-gray-700">${attendedText}</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 모달 푸터 -->
+                    <div class="p-6 flex gap-4 border-t border-gray-200">
+                        <button id="close-confirm-modal-btn" class="w-full bg-white hover:bg-graylv1 text-secondary border-2 border-secondary font-bold py-3 px-6 rounded-lg transition duration-200">
+                            수정하기
+                        </button>
+                        <button id="submit-modal-btn" class="w-full bg-secondary hover:bg-secondaryLight text-white font-bold py-3 px-6 rounded-lg transition duration-200">
+                            최종 제출
+                        </button>
+                    </div>
+                </div>
+            </div>
+        `;
+
+        // 모달을 body에 추가
+        document.body.insertAdjacentHTML('beforeend', modalHTML);
+
+        // 모달 닫기 이벤트
+        const modal = document.getElementById('confirm-modal');
+        const closeBtn = document.getElementById('close-confirm-modal-btn');
+        const submitBtn = document.getElementById('submit-modal-btn');
+
+        closeBtn.addEventListener('click', () => {
+            modal.remove();
+        });
+
+        submitBtn.addEventListener('click', () => {
+            onsubmit(formData);
+        })
+
+        // 모달 배경 클릭 시 닫기
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                modal.remove();
+            }
+        });
+
+        // ESC 키로 닫기
+        const handleEsc = (e) => {
+            if (e.key === 'Escape') {
+                modal.remove();
+                document.removeEventListener('keydown', handleEsc);
+            }
+        };
+        document.addEventListener('keydown', handleEsc);
+    };
+
+    const onsubmit = async (formData) => {
+        const confirmModal = document.getElementById('confirm-modal');
+        confirmModal.remove();
+
+        // 제출 시작: 플래그 설정 및 버튼 비활성화
+        isSubmitting = true;
+        confirmBtn.disabled = true;
+        const originalButtonText = confirmBtn.textContent;
+        confirmBtn.textContent = '제출 중...';
+
+        // DB insert
+        const {error} = await supabase
+            .from('tango')
+            .insert([formData]);
+
+        if (error) {
+            console.error(error.message);
+            alert('신청 접수에 실패했습니다.');
+            // 에러 발생 시 플래그 및 버튼 복구
+            isSubmitting = false;
+            confirmBtn.disabled = false;
+            confirmBtn.textContent = originalButtonText;
+            return;
+        }
+
+        // Edge Functions 호출 (실패해도 신청은 완료됨)
+        try {
+            await Promise.allSettled([
+                handleEdgeFunctions('tango-slack', 'Slack', formData),
+                handleEdgeFunctions('tango-google-sheet', 'Google Sheets', formData),
+                handleEdgeFunctions('tango-welcome-email', 'Gmail', formData)
+            ]);
+        } catch (error) {
+            console.warn('Edge Functions 호출 중 일부 오류 발생 (신청은 정상 접수됨):', error);
+        }
+
+        // 모달 표시
+        showSuccessModal(formData);
+
+        // 폼 초기화 및 플래그 리셋
+        form.reset();
+        conferenceHistoryDiv.classList.add('hidden');
+        conferenceCheckboxes.forEach(cb => cb.disabled = true);
+        confirmBtn.disabled = true;
+        confirmBtn.textContent = originalButtonText;
+        isSubmitting = false;
+    }
 }
