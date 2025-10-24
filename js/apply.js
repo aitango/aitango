@@ -494,7 +494,7 @@ function initApplyPage() {
         });
 
         submitBtn.addEventListener('click', () => {
-            onsubmit(formData);
+            onSubmit(formData);
         })
 
         // 모달 배경 클릭 시 닫기
@@ -514,11 +514,10 @@ function initApplyPage() {
         document.addEventListener('keydown', handleEsc);
     };
 
-    const onsubmit = async (formData) => {
+    const onSubmit = async (formData) => {
         const confirmModal = document.getElementById('confirm-modal');
         confirmModal.remove();
 
-        // 제출 시작: 플래그 설정 및 버튼 비활성화
         isSubmitting = true;
         confirmBtn.disabled = true;
         const originalButtonText = confirmBtn.textContent;
@@ -532,28 +531,26 @@ function initApplyPage() {
         if (error) {
             console.error(error.message);
             alert('신청 접수에 실패했습니다.');
-            // 에러 발생 시 플래그 및 버튼 복구
             isSubmitting = false;
             confirmBtn.disabled = false;
             confirmBtn.textContent = originalButtonText;
             return;
         }
 
-        // Edge Functions 호출 (실패해도 신청은 완료됨)
-        try {
-            await Promise.allSettled([
-                handleEdgeFunctions('tango-slack', 'Slack', formData),
-                handleEdgeFunctions('tango-google-sheet', 'Google Sheets', formData),
-                handleEdgeFunctions('tango-welcome-email', 'Gmail', formData)
-            ]);
-        } catch (error) {
-            console.warn('Edge Functions 호출 중 일부 오류 발생 (신청은 정상 접수됨):', error);
-        }
+        ['tango-slack', 'tango-google-sheet', 'tango-welcome-email'].forEach(functionName => {
+            fetch(`${supabaseUrl}/functions/v1/${functionName}`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': `Bearer ${supabaseAnonKey}`
+                },
+                body: JSON.stringify(formData),
+                keepalive: true
+            }).catch(err => console.warn(`${functionName} 오류:`, err));
+        });
 
-        // 모달 표시
+        // 즉시 성공 모달 표시
         showSuccessModal(formData);
-
-        // 폼 초기화 및 플래그 리셋
         form.reset();
         conferenceHistoryDiv.classList.add('hidden');
         conferenceCheckboxes.forEach(cb => cb.disabled = true);
