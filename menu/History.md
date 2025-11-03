@@ -19,12 +19,36 @@
 
 ### 언론보도🌍
 <div class="my-4 grid grid-cols-1 gap-5 m-8 sm:grid-cols-2 lg:grid-cols-3">
-    <a href="https://www.etnews.com/20241204000236" target="_blank" 
+    <a href="https://www.edaily.co.kr/News/Read?newsId=01466166642361784&mediaCodeNo=257&OutLnkChk=Y" target="_blank" 
         class="no-underline hover:text-gray-100 transform duration-200 hover:-translate-y-2" style="color: #E3E3E3">
             <div class="p-4 rounded-lg bg-white border border-graylv2" style="overflow: hidden; text-align: center; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
-                <img src="https://img.etnews.com/news/article/2024/12/04/news-p.v1.20241204.47808c8ed2e748c7a1fa2e0587af89fe_P1.jpg" alt="기사 이미지" class="hover:underline" style="width: 100%; height: auto; max-height: 150px; object-fit: cover; margin: 0 0 20px 0">
-                <p class="text-lg text-primaryDark" style="margin: 1rem 0 0; font-weight: bold">ETRI, '노코드' 기계학습 개발도구 공개…AI 지식 부족해도 개발 도와</p>
-                <p style="margin: 1rem 0 0 0; font-size: 1rem">2024.12.04 전자신문</p>
+                <img src="https://image.edaily.co.kr/images/photo/files/NP/S/2025/11/PS25110200205.jpg" alt="기사 이미지" class="hover:underline" style="width: 100%; height: auto; max-height: 150px; object-fit: cover; margin: 0 0 20px 0">
+                <p class="text-lg text-primaryDark" style="margin: 1rem 0 0; font-weight: bold">“AI 지식 없어도 한 번에”ETRI, 노코드 기계학습 도구 공개</p>
+                <p style="margin: 1rem 0 0 0; font-size: 1rem">2025.11.03 이데일리</p>
+            </div>
+    </a>
+    <a href="https://www.epnc.co.kr/news/articleView.html?idxno=324163" target="_blank" 
+        class="no-underline hover:text-gray-100 transform duration-200 hover:-translate-y-2" style="color: #E3E3E3">
+            <div class="p-4 rounded-lg bg-white border border-graylv2" style="overflow: hidden; text-align: center; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+                <img src="https://cdn.epnc.co.kr/news/photo/202511/324163_329501_97.jpg" alt="기사 이미지" class="hover:underline" style="width: 100%; height: auto; max-height: 150px; object-fit: cover; margin: 0 0 20px 0">
+                <p class="text-lg text-primaryDark" style="margin: 1rem 0 0; font-weight: bold">ETRI, 노코드 기계학습 개발도구 공개…“AI·SW지식 부족해도 한번 실행 OK”</p>
+                <p style="margin: 1rem 0 0 0; font-size: 1rem">2025.11.03 테크월드뉴스</p>
+            </div>
+    </a>
+    <a href="https://biz.heraldcorp.com/article/10606733?ref=naver" target="_blank" 
+        class="no-underline hover:text-gray-100 transform duration-200 hover:-translate-y-2" style="color: #E3E3E3">
+            <div class="p-4 rounded-lg bg-white border border-graylv2" style="overflow: hidden; text-align: center; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+                <img src="https://wimg.heraldcorp.com/news/cms/2025/11/02/news-p.v1.20251102.a26b359a29b54ad3abedcf69e9e84591_P1.jpg" alt="기사 이미지" class="hover:underline" style="width: 100%; height: auto; max-height: 150px; object-fit: cover; margin: 0 0 20px 0">
+                <p class="text-lg text-primaryDark" style="margin: 1rem 0 0; font-weight: bold">“AI·SW지식 없어도 OK” ETRI, 노코드 기계학습 개발도구 공개</p>
+                <p style="margin: 1rem 0 0 0; font-size: 1rem">2025.11.02 헤럴드경제</p>
+            </div>
+    </a>
+    <a href="https://www.aitimes.kr/news/articleView.html?idxno=37020" target="_blank" 
+        class="no-underline hover:text-gray-100 transform duration-200 hover:-translate-y-2" style="color: #E3E3E3">
+            <div class="p-4 rounded-lg bg-white border border-graylv2" style="overflow: hidden; text-align: center; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+                <img src="https://cdn.aitimes.kr/news/photo/202511/37020_56229_513.jpg" alt="기사 이미지" class="hover:underline" style="width: 100%; height: auto; max-height: 150px; object-fit: cover; margin: 0 0 20px 0">
+                <p class="text-lg text-primaryDark" style="margin: 1rem 0 0; font-weight: bold">ETRI, 노코드 머신러닝 개발 도구 모두 오픈소스로 공개..."AI·SW지식 부족해도 한번 실행 OK, SW 손쉽게 개발도와"</p>
+                <p style="margin: 1rem 0 0 0; font-size: 1rem">2025.11.02 인공지능신문</p>
             </div>
     </a>
     <a href="https://www.aitimes.kr/news/articleView.html?idxno=33084" target="_blank" 
@@ -33,6 +57,14 @@
                 <img src="https://cdn.aitimes.kr/news/photo/202412/33084_50295_557.png" alt="기사 이미지" class="hover:underline" style="width: 100%; height: auto; max-height: 150px; object-fit: cover; margin: 0 0 20px 0">
                 <p class="text-lg text-primaryDark" style="margin: 1rem 0 0; font-weight: bold">ETRI, 노코드 머신러닝 개발도구 '탱고 프레임워크' 오픈소스로 공개..."AI·SW지식 부족해도 한번 실행으로 OK!"</p>
                 <p style="margin: 1rem 0 0 0; font-size: 1rem">2024.12.04 인공지능신문</p>
+            </div>
+    </a>
+    <a href="https://www.etnews.com/20241204000236" target="_blank" 
+        class="no-underline hover:text-gray-100 transform duration-200 hover:-translate-y-2" style="color: #E3E3E3">
+            <div class="p-4 rounded-lg bg-white border border-graylv2" style="overflow: hidden; text-align: center; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+                <img src="https://img.etnews.com/news/article/2024/12/04/news-p.v1.20241204.47808c8ed2e748c7a1fa2e0587af89fe_P1.jpg" alt="기사 이미지" class="hover:underline" style="width: 100%; height: auto; max-height: 150px; object-fit: cover; margin: 0 0 20px 0">
+                <p class="text-lg text-primaryDark" style="margin: 1rem 0 0; font-weight: bold">ETRI, '노코드' 기계학습 개발도구 공개…AI 지식 부족해도 개발 도와</p>
+                <p style="margin: 1rem 0 0 0; font-size: 1rem">2024.12.04 전자신문</p>
             </div>
     </a>
     <a href="https://www.koit.co.kr/news/articleView.html?idxno=127056" target="_blank" 
