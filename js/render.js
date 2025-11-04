@@ -451,7 +451,7 @@ function renderCheckin(checkinValue) {
     const qrContainer = document.getElementById("qrcode-container");
     if (qrContainer) {
       // 먼저 API 이미지를 시도
-      const apiUrl = `https://api.qrserver.com5/v1/create-qr-code/?size=500x500&data=${encodeURIComponent(checkinValue)}&qzone=1`;
+      const apiUrl = `https://api.qrserver.com/v1/create-qr-code/?size=500x500&data=${encodeURIComponent(checkinValue)}&qzone=1`;
       const img = document.createElement("img");
       img.style.cssText = "max-width:100%;height:auto;display:block;";
       img.alt = "QR Code";
