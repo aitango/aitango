@@ -20,6 +20,22 @@ if (window.location.pathname.endsWith("/index.html")) {
   history.replaceState(null, "", newPath);
 }
 
+// 경로에서 checkin= 형태를 감지하고 쿼리 파라미터로 변환
+const checkinInPath = pathParts.find(part => part.startsWith("checkin="));
+if (checkinInPath && !url.searchParams.get("checkin")) {
+  const checkinValue = checkinInPath.split("=")[1];
+  if (checkinValue) {
+    // 경로에서 checkin 파라미터 추출하여 쿼리 파라미터로 변환
+    const newUrl = new URL(window.location.href);
+    newUrl.pathname = "/"; // 경로를 루트로 정규화
+    newUrl.searchParams.set("checkin", checkinValue);
+    history.replaceState(null, "", newUrl);
+    // URL 객체 업데이트
+    Object.assign(url, newUrl);
+    pathParts.length = 0; // 경로 파트 초기화
+  }
+}
+
 if (isLocal) {
   // 로컬 테스트 환경
 
@@ -64,10 +80,11 @@ if (isLocal) {
 
 // 브라우저의 뒤로가기/앞으로가기 버튼 처리
 window.addEventListener("popstate", (event) => {
-  // 뒤로 가는 것은 3가지 케이스가 있을 수 있음
+  // 뒤로 가는 것은 여러 케이스가 있을 수 있음
   // 1. 뒤로 갔을 때 메인 페이지(/), 뒤로 갔을 때 블로그 리스트 페이지(/?menu=blog.md) (실제로는 동일)
   // 2. 뒤로 갔을 때 menu 페이지(/?menu=about.md)
   // 3. 뒤로 갔을 때 post 페이지(/?post=20210601_[제목]_[카테고리]_[썸네일]_[저자].md)
+  // 4. 뒤로 갔을 때 checkin 페이지(/?checkin=TESTA)
 
   // 렌더링이 이미 된 것은 category, init, blogList, blogMenu
 
@@ -77,6 +94,10 @@ window.addEventListener("popstate", (event) => {
   if (!url.search.split("=")[1] || url.search.split("=")[1] === "blog.md") {
     // 블로그 리스트 로딩
     renderBlogList();
+  } else if (url.searchParams.get("checkin")) {
+    // checkin 페이지 로딩
+    const checkinValue = url.searchParams.get("checkin");
+    renderCheckin(checkinValue);
   } else if (url.search.split("=")[0] === "?menu") {
     // 메뉴 상세 정보 로딩
     // console.log('menu', url.search.split("=")[1])

@@ -402,6 +402,56 @@ function renderOtherContents(menu) {
   }
 }
 
+function renderCheckin(checkinValue) {
+  /*
+    checkin 파라미터에 따라 동적으로 페이지를 렌더링하는 함수
+    checkinValue: TESTA, TESTB, TESTC 등 동적인 값
+    */
+  document.getElementById("blog-posts").style.display = "none";
+  document.getElementById("contents").style.display = "block";
+  
+  // checkin 값을 표시하는 티켓 형태의 마크다운/HTML 콘텐츠 생성 (배경색 변경 없음)
+  const checkinContent = `# 환영합니다.
+
+<div style="max-width:720px;margin:0 auto;padding:18px;border:1px solid #e5e7eb;border-radius:12px;">
+
+  <!-- 상단 티켓 라벨 -->
+  <div style="display:flex;justify-content:center;align-items:center;margin-bottom:8px;">
+    <span style="display:inline-block;padding:6px 14px;border-radius:9999px;border:1px dashed #d1d5db;font-weight:700;color:#111;letter-spacing:0.5px;">입장 코드</span>
+  </div>
+
+  <!-- 티켓 본문: 코드 -->
+  <p style="text-align:center;font-size:28px;font-weight:900;margin:0 0 14px;color:#111;">${checkinValue}</p>
+
+  <!-- 잘라내기 느낌의 구분선 (상단) -->
+  <div style="height:1px;border-top:1px dashed #e5e7eb;margin:10px 0"></div>
+
+  <!-- QR 영역: 흰 배경 유지, 테두리/패딩으로 티켓 느낌 강조 -->
+  <div style="display:flex;justify-content:center;align-items:center;padding:14px;border-radius:8px;border:1px solid #f3f4f6;background:transparent;">
+    <img src="https://api.qrserver.com/v1/create-qr-code/?size=500x500&data=${encodeURIComponent(checkinValue)}&qzone=1" alt="QR" style="max-width:100%;height:auto;display:block;" />
+  </div>
+
+  <!-- 잘라내기 느낌의 구분선 (하단) -->
+  <div style="height:1px;border-top:1px dashed #e5e7eb;margin:10px 0"></div>
+
+  <!-- 하단 정보: 생성 시간 등 -->
+  <div style="display:flex;justify-content:space-between;align-items:center;font-size:13px;color:#6b7280;margin-top:6px;">
+    <span>생성 시간: ${new Date().toLocaleString('ko-KR')}</span>
+    <span>TANGO Community</span>
+  </div>
+
+</div>
+`;
+
+  // 마크다운 스타일링 적용
+  styleMarkdown("checkin", checkinContent);
+  
+  // URL 업데이트
+  const url = new URL(origin);
+  url.searchParams.set("checkin", checkinValue);
+  window.history.pushState({}, "", url);
+}
+
 function loadScript(src) {
     const scriptEl = document.createElement("script");
     scriptEl.src = src;
@@ -635,6 +685,17 @@ async function initialize() {
     
     TODO: URL 파싱 결과 상세 블로그나 메뉴상태이면 검색 버튼을 누르기 전까지는 initDataBlogList()를 실행시킬 필요 없음. 이를 통해 API 호출 한 번을 아낄 수 있음.
     */
+  // checkin 파라미터 확인 (URLparsing.js에서 경로 형태를 쿼리 파라미터로 변환했으므로 쿼리 파라미터만 확인)
+  const checkinValue = url.searchParams.get("checkin");
+  
+  if (checkinValue) {
+    // checkin 페이지 렌더링
+    await initDataBlogMenu();
+    renderMenu();
+    renderCheckin(checkinValue);
+    return;
+  }
+
   const menuName = url.search.split("=")[1];
   if (!menuName || menuName === "blog.md") {
     // 메뉴 로딩
