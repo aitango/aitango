@@ -428,7 +428,7 @@ function renderCheckin(checkinValue) {
 
   <!-- QR 영역: 흰 배경 유지, 테두리/패딩으로 티켓 느낌 강조 -->
   <div style="display:flex;justify-content:center;align-items:center;padding:14px;border-radius:8px;border:1px solid #f3f4f6;background:transparent;">
-    <img src="https://api.qrserver.com/v1/create-qr-code/?size=500x500&data=${encodeURIComponent(checkinValue)}&qzone=1" alt="QR" style="max-width:100%;height:auto;display:block;" />
+    <div id="qrcode-container" style="display:flex;justify-content:center;align-items:center;max-width:100%;"></div>
   </div>
 
   <!-- 잘라내기 느낌의 구분선 (하단) -->
@@ -445,6 +445,46 @@ function renderCheckin(checkinValue) {
 
   // 마크다운 스타일링 적용
   styleMarkdown("checkin", checkinContent);
+  
+  // QR 코드 생성 (API fallback 처리)
+  setTimeout(() => {
+    const qrContainer = document.getElementById("qrcode-container");
+    if (qrContainer) {
+      // 먼저 API 이미지를 시도
+      const apiUrl = `https://api.qrserver.com5/v1/create-qr-code/?size=500x500&data=${encodeURIComponent(checkinValue)}&qzone=1`;
+      const img = document.createElement("img");
+      img.style.cssText = "max-width:100%;height:auto;display:block;";
+      img.alt = "QR Code";
+      
+      // API 이미지 로드 실패 시 로컬 라이브러리 사용
+      img.onerror = function() {
+        qrContainer.innerHTML = "";
+        if (typeof QRCode !== "undefined") {
+          try {
+            new QRCode(qrContainer, {
+              text: checkinValue,
+              width: 500,
+              height: 500,
+              colorDark: "#000000",
+              colorLight: "#ffffff",
+              correctLevel: QRCode.CorrectLevel.M
+            });
+          } catch (e) {
+            qrContainer.innerHTML = `<p style="color:#ef4444;text-align:center;padding:20px;">QR 코드 생성 실패</p>`;
+          }
+        } else {
+          qrContainer.innerHTML = `<p style="color:#ef4444;text-align:center;padding:20px;">QR 라이브러리를 불러올 수 없습니다.</p>`;
+        }
+      };
+      
+      img.onload = function() {
+        // API 이미지가 성공적으로 로드됨
+      };
+      
+      img.src = apiUrl;
+      qrContainer.appendChild(img);
+    }
+  }, 100);
   
   // URL 업데이트
   const url = new URL(origin);
