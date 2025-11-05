@@ -6,7 +6,7 @@
 
 <!-- 참가 접수하기 버튼 -->
 <div style="text-align: center; margin: 30px 0;">
-        <a href="/?menu=Apply.md" id="apply-button" style="display: inline-block;
+        <a href="" onclick="alert('현재 사전접수가 마감되었습니다.')" id="apply-button" style="display: inline-block;
               width: 100%;
               padding: 30px 30px;
               font-size: 30px;
@@ -17,7 +17,7 @@
               border-radius: 10px;
               box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
               transition: background 0.3s ease, transform 0.2s ease;">
-        2025 제 4회 TANGO 커뮤니티 참가 신청
+        2025 제 4회 TANGO 커뮤니티 D-1
     </a>
 </div>
 

@@ -142,9 +142,9 @@ function initApplyPage() {
             <!-- 제출 버튼 -->
             <div class="text-center pt-4">
                 <span id="submit-wrapper">
-                    <button type="button" id="confirm-btn"
+                    <button type="button" id="confirm-btn" onclick="alert('현재 사전접수가 마감되었습니다. 감사합니다.')"
                         class="bg-secondary text-white font-bold py-3 px-12 rounded-lg disabled:bg-[#E699A9] disabled:cursor-not-allowed transition" disabled>
-                        신청 접수
+                        신청접수 마감
                     </button>
                 </span>
             </div>
@@ -182,11 +182,11 @@ function initApplyPage() {
     });
 
     privacyConsent.addEventListener('change', () => {
-        confirmBtn.disabled = !privacyConsent.checked;
+        // confirmBtn.disabled = !privacyConsent.checked;
     });
 
     confirmBtn.addEventListener('click', () => {
-        onConfirm();
+        // onConfirm();
     });
 
     // 연락처 입력 필드에 숫자만 입력되도록 제한
