@@ -17,7 +17,7 @@
               border-radius: 10px;
               box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
               transition: background 0.3s ease, transform 0.2s ease;">
-        사전 접수 마감되었습니다.
+        행사가 종료되었습니다.
     </a>
 </div>
 
@@ -260,7 +260,7 @@
 <br>
 
 **Q. 발표 자료를 제공하나요?**    
-발표 자료는 행사 종료 후 며칠 후에 [TANGO Github](https://github.com/ML-TANGO/TANGO)에 올라갈 예정입니다.
+발표 자료는 [TANGO Github](https://github.com/ML-TANGO/TANGO/tree/main/docs/2025_Fall_Community_Conference)에서 확인할 수 있습니다.
 <br><br>
 
 **Q. 주차권이 제공되나요?**    

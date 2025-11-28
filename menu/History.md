@@ -4,16 +4,237 @@
 <h3 class="text-[28px] font-bold mb-2 mt-6 border-none pb-0">목차🗒️</h3>
 <div class="flex flex-col gap-2 text-sm rounded-lg py-5 px-8 bg-white border border-graylv2 w-fit">
     <div class="before:content-['•'] before:mr-2">
-        <a href="#2022TANGO">2022 TANGO 커뮤니티 제1회 컨퍼런스</a>
+        <a href="#2025TANGO">2025 TANGO 커뮤니티 제4회 컨퍼런스</a>
+    </div>
+    <div class="before:content-['•'] before:mr-2">
+        <a href="#2024TANGO">2024 TANGO 커뮤니티 제3회 컨퍼런스</a>
     </div>
     <div class="before:content-['•'] before:mr-2">
         <a href="#2023TANGO">2023 TANGO 커뮤니티 제2회 컨퍼런스</a>
     </div>
     <div class="before:content-['•'] before:mr-2">
-        <a href="#2024TANGO">2024 TANGO 커뮤니티 제3회 컨퍼런스</a>
+        <a href="#2022TANGO">2022 TANGO 커뮤니티 제1회 컨퍼런스</a>
     </div>
 </div>
 
+<br>
+<br>
+
+<p id="2025TANGO"></p>
+
+# 2025 TANGO 커뮤니티 제4회 컨퍼런스
+
+![
+2025 conference
+](img/2025/TANGO25_1.png)
+
+![
+2025 conference
+](img/2025/TANGO25_2.png)
+
+![
+2025 conference
+](img/2025/TANGO25_3.png)
+
+![
+2025 conference
+](img/2025/TANGO25_4.png)
+
+![
+2025 conference
+](img/2025/TANGO25_5.png)
+
+![
+2025 conference
+](img/2025/TANGO25_6.png)
+
+![
+2025 conference
+](img/2025/TANGO25_7.png)
+
+![
+2025 conference
+](img/2025/TANGO25_8.png)
+
+![
+2025 conference
+](img/2025/TANGO25_9.png)
+
+![
+2025 conference
+](img/2025/TANGO25_10.png)
+
+![
+2025 conference
+](img/2025/TANGO25_11.png)
+
+![
+2025 conference
+](img/2025/TANGO25_12.png)
+
+![
+2025 conference
+](img/2025/TANGO25_13.png)
+
+![
+2025 conference
+](img/2025/TANGO25_14.png)
+
+![
+2025 conference
+](img/2025/TANGO25_15.png)
+
+![
+2025 conference
+](img/2025/TANGO25_16.png)
+
+![
+2025 conference
+](img/2025/TANGO25_17.png)
+
+![
+2025 conference
+](img/2025/TANGO25_18.png)
+
+![
+2025 conference
+](img/2025/TANGO25_19.png)
+
+### 행사 안내📅
+
+**일시**  
+2025년 11월 6일(목) 13:30 ~ 17:30
+
+**장소**  
+서울 과학기술회관 (서울 강남구 테헤란로7길 22, 한국과학기술회관 1관 지하1층 (대회의실1))
+
+**주제**  
+본 과제를 운영하는 오픈소스 커뮤니티 및 현재까지 개발된 핵심 기술 소개를 통한 외부 개발자·사용자 유인
+
+<br>
+
+<button class="bg-secondary py-1 px-4 rounded-full hover:bg-secondaryLight transition duration-200 mr-4">
+    <a href="https://github.com/ML-TANGO/TANGO/tree/main/docs/2025_Fall_Community_Conference" target="_blank" 
+        class="flex items-center gap-2 text-white no-underline duration-200 text-sm hover:text-white hover:translate-y-0" style="color: white">
+            제 4회 발표 자료
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="white" class="size-5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
+            </svg>
+    </a>
+</button>
+<button class="bg-secondary py-1 px-4 rounded-full hover:bg-secondaryLight transition duration-200">
+    <a id="pdf" href="https://tangoai.or.kr/img/2025_tango.png" 
+        class="flex items-center gap-2 text-white no-underline duration-200 text-sm hover:text-white hover:translate-y-0" style="color: white">
+            제 4회 포스터 살펴보기
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="white" class="size-5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="m9 13.5 3 3m0 0 3-3m-3 3v-6m1.06-4.19-2.12-2.12a1.5 1.5 0 0 0-1.061-.44H4.5A2.25 2.25 0 0 0 2.25 6v12a2.25 2.25 0 0 0 2.25 2.25h15A2.25 2.25 0 0 0 21.75 18V9a2.25 2.25 0 0 0-2.25-2.25h-5.379a1.5 1.5 0 0 1-1.06-.44Z" />
+            </svg>
+    </a>
+</button>
+<br/>
+<br>
+
+<table border="1" cellpadding="10" cellspacing="0" style="border-collapse: collapse" class="table-auto w-auto border-collapse mb-6 h-auto align-middle border-graylv2 text-left">
+    <thead class="text-left bg-bglv1">
+        <tr style="text-align: center">
+            <th class="font-bold">시간</th>
+            <th class="font-bold">발표자</th>
+            <th class="font-bold">내용</th>
+        </tr>
+    </thead>
+    <tbody class="text-left">
+        <tr>
+            <td>13:30 ~ 13:40</td>
+            <td>ETRI</td>
+            <td>개회식</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>과학기술정보통신부 담당자, IITP SW PM</td>
+            <td>축사</td>
+        </tr>
+        <tr>
+            <td>13:30 ~ 14:10</td>
+            <td>조창식 ETRI 실장</td>
+            <td>TANGO 커뮤니티 소개</td>
+        </tr>
+        <tr class="font-bold">
+            <td class="text-primaryDark">14:10 ~ 14:40</td>
+            <td class="text-primaryDark">경품추첨 및 휴식</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>14:40 ~ 14:55</td>
+            <td>이동헌 서울대병원 교수</td>
+            <td>생성형AI 기반 심폐질환 진단 및 치료경과 예측</td>
+        </tr>
+        <tr>
+            <td>14:55 ~ 15:10</td>
+            <td>정진기 에이브노틱스 기술이사</td>
+            <td>자율운행선박을 위한 해상상황인식 기술</td>
+        </tr>
+        <tr>
+            <td>15:10 ~ 15:25</td>
+            <td>민영수 슈어데이터랩 연구소장</td>
+            <td>암묵지 학습을 통한 스마트팜 생육 제어</td>
+        </tr>
+        <tr>
+            <td>15:25 ~ 15:40</td>
+            <td>염익준 아크릴 연구소장</td>
+            <td>GenAI 구축 전주기 지원 LLMOps 플랫폼</td>
+        </tr>
+        <tr class="font-bold">
+            <td class="text-primaryDark">15:40 ~ 16:00</td>
+            <td class="text-primaryDark">경품추첨 및 휴식</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>16:00 ~ 16:15</td>
+            <td>신동민 웨다 선임</td>
+            <td>TANGO 레이블링과 스마트공장 구축 사례</td>
+        </tr>
+        <tr>
+            <td>16:15 ~ 16:30</td>
+            <td>황의진 서울대병원 교수</td>
+            <td>TANGO 활용 의료영상 기반 예측모델 구축</td>
+        </tr>
+        <tr>
+            <td>16:30 ~ 16:45</td>
+            <td>진승완 하늘소프트 과장</td>
+            <td>TANGO 활용 화재 감지 시스템 개선 사례</td>
+        </tr>
+        <tr>
+            <td>16:45 ~ 17:00</td>
+            <td>박종현 래블업 연구소장</td>
+            <td>다중 AI 가속칩 배포시스템</td>
+        </tr>
+        <tr>
+            <td>17:00 ~ 17:10</td>
+            <td>이재성 중앙대 교수</td>
+            <td>연속학습을 적용한 신경망 자동탐색 기술</td>
+        </tr>
+        <tr>
+            <td>17:10 ~ 17:20</td>
+            <td>김중헌 고려대 교수</td>
+            <td>NAS 파라미터 최적화 기술</td>
+        </tr>
+        <tr>
+            <td>17:20 ~ 17:30</td>
+            <td>이윤규 중앙대 교수</td>
+            <td>TANGO 신경망 시각 프로그래밍 기술</td>
+        </tr>
+        <tr class="font-bold">
+            <td class="text-primaryDark">17:30 ~	</td>
+            <td class="text-primaryDark">폐회식 (경품 추첨)  </td>
+            <td></td>
+        </tr>
+    </tbody>
+</table>
+
+<br>
+<br>
+<br>
+<br><br>
 <br>
 <br>
 
@@ -23,11 +244,11 @@
 
 
 ![
- 2024 conference
+2024 conference
 ](img/2024/1.png)
 
 ![
- 2024 conference
+2024 conference
 ](img/2024/16.png)
 
 ![
