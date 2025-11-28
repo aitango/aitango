@@ -70,10 +70,6 @@
 
 ![
 2025 conference
-](img/2025/TANGO25_12.png)
-
-![
-2025 conference
 ](img/2025/TANGO25_13.png)
 
 ![
